@@ -9,8 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "teal-light": "#A0CDCF",
+        "teal-dark": "#00807E",
+        "brand-black": "#231F20",
+        sand: "#C2B59B",
+        "gray-bg": "#F2F2F0",
+      },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },

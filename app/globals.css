@@ -3,25 +3,98 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --teal-light: #A0CDCF;
+  --teal-dark: #00807E;
+  --black: #231F20;
+  --sand: #C2B59B;
+  --white: #FFFFFF;
+  --gray-bg: #F2F2F0;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--black);
+  background: var(--white);
+  font-family: "Montserrat", sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Scroll animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dot pattern background */
+.dot-pattern {
+  background-image: radial-gradient(circle, #00807E 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Mesh grid pattern */
+.mesh-pattern {
+  background-image:
+    linear-gradient(to right, rgba(160, 205, 207, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(160, 205, 207, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--teal-dark);
+  border-radius: 4px;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(2rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-content {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Hero arrow bounce */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+/* Focus styles for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--teal-dark);
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--teal-dark);
+  outline-offset: 2px;
+  border-radius: 2px;
 }

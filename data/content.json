@@ -1,0 +1,193 @@
+{
+  "general": {
+    "nombre": "TRESESENTA",
+    "tagline": "Administración e Inspección de Proyectos de Construcción",
+    "quienesSomos": "En TRESESENTA nos dedicamos a la administración e inspección de proyectos de construcción, garantizando que cada obra cumpla con los más altos estándares de calidad, tiempo y presupuesto. Con más de una década de experiencia, somos el aliado estratégico que transforma visiones en estructuras sólidas.",
+    "mision": "Brindar servicios de administración e inspección de proyectos de construcción con excelencia, innovación y compromiso, asegurando el cumplimiento de los objetivos de nuestros clientes.",
+    "vision": "Ser la firma líder en gestión de proyectos de construcción en la región, reconocida por nuestra integridad, eficiencia y resultados excepcionales.",
+    "valores": [
+      "Integridad y transparencia",
+      "Excelencia técnica",
+      "Compromiso con el cliente",
+      "Innovación continua",
+      "Trabajo en equipo",
+      "Responsabilidad social"
+    ],
+    "telefono": "+507 396-0360",
+    "email": "info@tresesenta.com",
+    "direccion": "Ciudad de Panamá, Panamá",
+    "redes": {
+      "instagram": "https://instagram.com/tresesenta",
+      "linkedin": "https://linkedin.com/company/tresesenta",
+      "facebook": "https://facebook.com/tresesenta"
+    }
+  },
+  "servicios": [
+    {
+      "id": "gerencia-proyectos",
+      "nombre": "Gerencia de Proyectos",
+      "descripcion": "Lideramos la planificación, coordinación y control integral de su proyecto desde la concepción hasta la entrega final. Nuestro equipo asegura que cada fase se ejecute dentro del alcance, presupuesto y cronograma establecidos.",
+      "icono": "briefcase"
+    },
+    {
+      "id": "inspeccion-tecnica",
+      "nombre": "Inspección Técnica",
+      "descripcion": "Realizamos supervisión continua en obra para verificar el cumplimiento de planos, especificaciones técnicas y normativas vigentes. Cada detalle es evaluado para garantizar la calidad constructiva.",
+      "icono": "search"
+    },
+    {
+      "id": "preconstruccion",
+      "nombre": "Preconstrucción",
+      "descripcion": "Analizamos la viabilidad técnica y financiera del proyecto antes de iniciar la construcción. Incluye revisión de presupuestos, cronogramas preliminares y evaluación de riesgos.",
+      "icono": "clipboard"
+    },
+    {
+      "id": "control-calidad",
+      "nombre": "Control de Calidad",
+      "descripcion": "Implementamos sistemas rigurosos de aseguramiento de calidad en cada etapa del proyecto, desde la recepción de materiales hasta las pruebas finales de funcionamiento.",
+      "icono": "shield"
+    },
+    {
+      "id": "administracion-contratos",
+      "nombre": "Administración de Contratos",
+      "descripcion": "Gestionamos todos los aspectos contractuales del proyecto: licitaciones, órdenes de cambio, reclamos, pagos y cierre de contratos, protegiendo los intereses del propietario.",
+      "icono": "fileText"
+    },
+    {
+      "id": "gestion-compras",
+      "nombre": "Gestión de Compras",
+      "descripcion": "Optimizamos el proceso de adquisición de materiales y equipos, negociando con proveedores para obtener las mejores condiciones de precio, calidad y tiempo de entrega.",
+      "icono": "shoppingCart"
+    }
+  ],
+  "proyectos": [
+    {
+      "id": "torre-oceania",
+      "nombre": "Torre Oceanía",
+      "categoria": "Comercial",
+      "ubicacion": "Punta Pacífica, Ciudad de Panamá",
+      "periodo": "2021 - 2023",
+      "promotor": "Grupo Inversiones del Pacífico",
+      "inversion": "$45,000,000",
+      "area": "32,000 m²",
+      "descripcion": "Edificio de oficinas clase A de 25 pisos con certificación LEED Gold. El proyecto incluyó la coordinación de más de 15 subcontratistas y la implementación de tecnología BIM para el control de interferencias.",
+      "servicios": ["Gerencia de Proyectos", "Inspección Técnica", "Control de Calidad"],
+      "imagenes": [
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800",
+        "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800"
+      ]
+    },
+    {
+      "id": "residencial-vista-mar",
+      "nombre": "Residencial Vista Mar",
+      "categoria": "Residencial",
+      "ubicacion": "Costa del Este, Ciudad de Panamá",
+      "periodo": "2022 - 2024",
+      "promotor": "Desarrollos Costa Verde S.A.",
+      "inversion": "$28,000,000",
+      "area": "18,500 m²",
+      "descripcion": "Complejo residencial de lujo de 120 unidades distribuidas en 3 torres de 15 pisos cada una. Amenidades incluyen piscina infinity, gimnasio y áreas sociales con vista al mar.",
+      "servicios": ["Gerencia de Proyectos", "Preconstrucción", "Administración de Contratos"],
+      "imagenes": [
+        "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800",
+        "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800",
+        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800"
+      ]
+    },
+    {
+      "id": "hotel-pacifico",
+      "nombre": "Hotel Pacífico Resort & Spa",
+      "categoria": "Hotelería",
+      "ubicacion": "Playa Blanca, Coclé",
+      "periodo": "2020 - 2023",
+      "promotor": "Cadena Hoteles Premium",
+      "inversion": "$62,000,000",
+      "area": "45,000 m²",
+      "descripcion": "Resort de 5 estrellas con 200 habitaciones, centro de convenciones, spa de clase mundial y 3 restaurantes. Construcción desafiante en zona costera con protocolos especiales contra la salinidad.",
+      "servicios": ["Gerencia de Proyectos", "Inspección Técnica", "Control de Calidad", "Gestión de Compras"],
+      "imagenes": [
+        "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?w=800",
+        "https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?w=800",
+        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800"
+      ]
+    },
+    {
+      "id": "centro-logistico-americas",
+      "nombre": "Centro Logístico Las Américas",
+      "categoria": "Megaproyecto",
+      "ubicacion": "Howard, Panamá Oeste",
+      "periodo": "2019 - 2024",
+      "promotor": "Consorcio Logístico Internacional",
+      "inversion": "$120,000,000",
+      "area": "85,000 m²",
+      "descripcion": "Megaproyecto logístico que incluye 6 naves industriales, centro de distribución automatizado, edificio administrativo y vías de acceso. El proyecto más grande gestionado por la firma.",
+      "servicios": ["Gerencia de Proyectos", "Inspección Técnica", "Preconstrucción", "Administración de Contratos", "Control de Calidad", "Gestión de Compras"],
+      "imagenes": [
+        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800",
+        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800",
+        "https://images.unsplash.com/photo-1587582423116-ec07293f0395?w=800"
+      ]
+    }
+  ],
+  "equipo": [
+    {
+      "id": "carlos-mendez",
+      "nombre": "Carlos Méndez",
+      "cargo": "Director General",
+      "foto": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
+      "linkedin": "https://linkedin.com/in/"
+    },
+    {
+      "id": "maria-rodriguez",
+      "nombre": "María Rodríguez",
+      "cargo": "Directora de Operaciones",
+      "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400",
+      "linkedin": "https://linkedin.com/in/"
+    },
+    {
+      "id": "alejandro-torres",
+      "nombre": "Alejandro Torres",
+      "cargo": "Gerente de Inspección",
+      "foto": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400",
+      "linkedin": "https://linkedin.com/in/"
+    }
+  ],
+  "metricas": [
+    { "valor": "+50", "label": "Proyectos Completados" },
+    { "valor": "$500M+", "label": "En Inversión Gestionada" },
+    { "valor": "+200K", "label": "Metros Cuadrados" },
+    { "valor": "12", "label": "Años de Experiencia" }
+  ],
+  "carrera": [
+    {
+      "id": "ingeniero-residente",
+      "titulo": "Ingeniero Residente",
+      "descripcion": "Buscamos un ingeniero civil con experiencia en supervisión de obra para unirse a nuestro equipo de inspección en proyectos comerciales y residenciales.",
+      "requisitos": [
+        "Ingeniero Civil titulado con idoneidad vigente",
+        "Mínimo 5 años de experiencia en supervisión de obra",
+        "Conocimiento de normativas de construcción panameñas",
+        "Manejo de AutoCAD, Revit y MS Project",
+        "Disponibilidad para trabajo en campo"
+      ],
+      "activo": true
+    },
+    {
+      "id": "coordinador-proyectos",
+      "titulo": "Coordinador de Proyectos",
+      "descripcion": "Profesional en ingeniería o arquitectura para coordinar actividades de preconstrucción y seguimiento de cronogramas en múltiples proyectos simultáneos.",
+      "requisitos": [
+        "Ingeniero Civil o Arquitecto con idoneidad",
+        "Mínimo 3 años de experiencia en coordinación de proyectos",
+        "Dominio de herramientas de gestión (Primavera P6, MS Project)",
+        "Excelentes habilidades de comunicación",
+        "Inglés intermedio-avanzado"
+      ],
+      "activo": true
+    }
+  ],
+  "clientes": [],
+  "mensajes": [],
+  "aplicaciones": []
+}
