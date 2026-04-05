@@ -34,7 +34,7 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-            <div className="w-10 h-[1px] bg-sand mt-6 mb-4" />
+            <div className="w-12 h-[2px] bg-sand mt-6 mb-4" />
             <p className="font-montserrat text-white/40 text-sm max-w-sm leading-relaxed">
               Firma de administración e inspección de proyectos de construcción.
               Garantizamos calidad, eficiencia y cumplimiento en cada obra.

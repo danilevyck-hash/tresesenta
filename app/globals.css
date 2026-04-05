@@ -68,9 +68,18 @@ body {
   animation: fadeIn 0.3s ease-out;
 }
 
+.modal-overlay.modal-closing {
+  animation: fadeOut 0.2s ease-in forwards;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 @keyframes slideUp {
@@ -78,8 +87,17 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes slideDown {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(2rem); }
+}
+
 .modal-content {
   animation: slideUp 0.3s ease-out;
+}
+
+.modal-closing .modal-content {
+  animation: slideDown 0.2s ease-in forwards;
 }
 
 /* Hero arrow bounce */
@@ -117,4 +135,30 @@ button:focus-visible {
   outline: 2px solid var(--teal-dark);
   outline-offset: 2px;
   border-radius: 2px;
+}
+
+/* Image loading skeleton */
+[data-nimg] {
+  background: var(--gray-bg);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+  .animate-bounce-slow {
+    animation: none;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+  .modal-overlay,
+  .modal-content,
+  .modal-closing,
+  .modal-closing .modal-content {
+    animation: none;
+  }
 }

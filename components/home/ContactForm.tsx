@@ -56,38 +56,50 @@ export default function ContactForm() {
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div>
+              <label className="font-montserrat font-semibold text-xs uppercase tracking-[0.15em] text-white/40 block mb-2">Nombre</label>
+              <input
+                type="text"
+                placeholder="Su nombre"
+                required
+                value={form.nombre}
+                onChange={(e) => setForm({ ...form, nombre: e.target.value })}
+                className="w-full bg-white/5 border border-white/15 text-white placeholder-white/30 px-5 py-4 font-montserrat text-sm focus:outline-none focus:border-sand transition-colors"
+              />
+            </div>
+            <div>
+              <label className="font-montserrat font-semibold text-xs uppercase tracking-[0.15em] text-white/40 block mb-2">Email</label>
+              <input
+                type="email"
+                placeholder="correo@ejemplo.com"
+                required
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+                className="w-full bg-white/5 border border-white/15 text-white placeholder-white/30 px-5 py-4 font-montserrat text-sm focus:outline-none focus:border-sand transition-colors"
+              />
+            </div>
+          </div>
+          <div>
+            <label className="font-montserrat font-semibold text-xs uppercase tracking-[0.15em] text-white/40 block mb-2">Teléfono</label>
             <input
-              type="text"
-              placeholder="Nombre"
-              required
-              value={form.nombre}
-              onChange={(e) => setForm({ ...form, nombre: e.target.value })}
-              className="w-full bg-white/5 border border-white/15 text-white placeholder-white/30 px-5 py-4 font-montserrat text-sm focus:outline-none focus:border-sand transition-colors"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              required
-              value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
+              type="tel"
+              placeholder="+507 000-0000"
+              value={form.telefono}
+              onChange={(e) => setForm({ ...form, telefono: e.target.value })}
               className="w-full bg-white/5 border border-white/15 text-white placeholder-white/30 px-5 py-4 font-montserrat text-sm focus:outline-none focus:border-sand transition-colors"
             />
           </div>
-          <input
-            type="tel"
-            placeholder="Teléfono"
-            value={form.telefono}
-            onChange={(e) => setForm({ ...form, telefono: e.target.value })}
-            className="w-full bg-white/5 border border-white/15 text-white placeholder-white/30 px-5 py-4 font-montserrat text-sm focus:outline-none focus:border-sand transition-colors"
-          />
-          <textarea
-            placeholder="Cuéntenos sobre su proyecto..."
-            required
-            rows={5}
-            value={form.mensaje}
-            onChange={(e) => setForm({ ...form, mensaje: e.target.value })}
-            className="w-full bg-white/5 border border-white/15 text-white placeholder-white/30 px-5 py-4 font-montserrat text-sm focus:outline-none focus:border-sand transition-colors resize-none"
-          />
+          <div>
+            <label className="font-montserrat font-semibold text-xs uppercase tracking-[0.15em] text-white/40 block mb-2">Mensaje</label>
+            <textarea
+              placeholder="Cuéntenos sobre su proyecto..."
+              required
+              rows={5}
+              value={form.mensaje}
+              onChange={(e) => setForm({ ...form, mensaje: e.target.value })}
+              className="w-full bg-white/5 border border-white/15 text-white placeholder-white/30 px-5 py-4 font-montserrat text-sm focus:outline-none focus:border-sand transition-colors resize-none"
+            />
+          </div>
           <div className="text-center pt-2">
             <button
               type="submit"
@@ -103,7 +115,7 @@ export default function ContactForm() {
             </p>
           )}
           {status === "error" && (
-            <p className="text-center text-red-400 font-montserrat text-sm">
+            <p className="text-center text-sand font-montserrat text-sm">
               Error al enviar. Intente nuevamente.
             </p>
           )}

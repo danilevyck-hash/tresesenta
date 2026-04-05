@@ -60,7 +60,7 @@ export default function ProyectosContent({ proyectos }: { proyectos: Proyecto[] 
         <div className="max-w-7xl mx-auto">
           <ProjectFilter active={filter} onChange={setFilter} />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filtered.map((p) => (
               <ProjectCard
                 key={p.id}

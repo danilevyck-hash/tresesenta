@@ -37,7 +37,7 @@ export default function ProyectosGrid({ proyectos }: { proyectos: Proyecto[] }) 
           <div className="w-12 h-[2px] bg-sand mx-auto mt-6" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {proyectos.slice(0, 4).map((p, i) => (
             <div
               key={p.id}
@@ -45,14 +45,16 @@ export default function ProyectosGrid({ proyectos }: { proyectos: Proyecto[] }) 
               style={{ transitionDelay: `${i * 100}ms` }}
               onClick={() => setSelected(p)}
             >
-              <img
+              <Image
                 src={p.imagenes[0]}
                 alt={p.nombre}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0"
               />
               <div className="absolute inset-0 bg-teal-dark/0 group-hover:bg-teal-dark/60 transition-colors duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-                <span className="font-montserrat font-semibold text-xs uppercase tracking-[0.2em] text-sand">
+                <span className="font-montserrat font-semibold text-xs uppercase tracking-[0.2em] text-teal-light">
                   {p.categoria}
                 </span>
                 <h3 className="font-altivo text-xl text-white mt-1 tracking-wide">

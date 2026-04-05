@@ -38,7 +38,7 @@ export default function QuienesSomos({ texto }: Props) {
 
         <Link
           href="/nosotros"
-          className="inline-block border-2 border-brand-black text-brand-black font-montserrat font-semibold text-sm uppercase tracking-[0.15em] px-8 py-3 hover:bg-brand-black hover:text-white transition-colors"
+          className="inline-block border-2 border-brand-black text-brand-black font-montserrat font-semibold text-sm uppercase tracking-[0.15em] px-10 py-4 hover:bg-brand-black hover:text-white transition-colors"
         >
           Conoce más
         </Link>

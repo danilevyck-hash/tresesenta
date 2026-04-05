@@ -17,7 +17,7 @@ export default function ClientesTicker({ proyectos }: { proyectos: Proyecto[] })
   const items = [...conLogo, ...conLogo];
 
   return (
-    <section className="py-16 px-4 bg-gray-bg relative overflow-hidden">
+    <section className="py-20 px-4 bg-gray-bg relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10 mb-10 text-center">
         <p className="font-montserrat font-semibold text-xs uppercase tracking-[0.3em] text-teal-dark mb-3">
           Confían en nosotros

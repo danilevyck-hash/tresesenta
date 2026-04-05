@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 interface Proyecto {
   id: string;
@@ -25,30 +26,40 @@ export default function ProjectModal({
   onClose: () => void;
 }) {
   const [currentImage, setCurrentImage] = useState(0);
+  const [closing, setClosing] = useState(false);
 
-  useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-    };
-    document.addEventListener("keydown", handleEsc);
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", handleEsc);
-      document.body.style.overflow = "";
-    };
+  const handleClose = useCallback(() => {
+    setClosing(true);
+    setTimeout(onClose, 200);
   }, [onClose]);
 
-  const nextImage = () =>
-    setCurrentImage((prev) => (prev + 1) % proyecto.imagenes.length);
-  const prevImage = () =>
-    setCurrentImage(
-      (prev) => (prev - 1 + proyecto.imagenes.length) % proyecto.imagenes.length
-    );
+  const nextImage = useCallback(
+    () => setCurrentImage((prev) => (prev + 1) % proyecto.imagenes.length),
+    [proyecto.imagenes.length]
+  );
+  const prevImage = useCallback(
+    () => setCurrentImage((prev) => (prev - 1 + proyecto.imagenes.length) % proyecto.imagenes.length),
+    [proyecto.imagenes.length]
+  );
+
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") handleClose();
+      if (e.key === "ArrowRight") nextImage();
+      if (e.key === "ArrowLeft") prevImage();
+    };
+    document.addEventListener("keydown", handleKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", handleKey);
+      document.body.style.overflow = "";
+    };
+  }, [handleClose, nextImage, prevImage]);
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay"
-      onClick={onClose}
+      className={`fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay ${closing ? "modal-closing" : ""}`}
+      onClick={handleClose}
     >
       <div className="absolute inset-0 bg-brand-black/80" />
       <div
@@ -57,30 +68,35 @@ export default function ProjectModal({
       >
         {/* Close button */}
         <button
-          onClick={onClose}
-          className="absolute top-4 right-4 z-20 text-white hover:text-teal-light transition-colors bg-brand-black/50 p-2"
+          onClick={handleClose}
+          aria-label="Cerrar modal"
+          className="absolute top-3 right-3 z-20 text-white hover:text-teal-light transition-colors bg-brand-black/50 p-3"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Image slider */}
         <div className="relative aspect-video">
-          <img
+          <Image
             src={proyecto.imagenes[currentImage]}
-            alt={proyecto.nombre}
-            className="w-full h-full object-cover"
+            alt={`${proyecto.nombre} — imagen ${currentImage + 1} de ${proyecto.imagenes.length}`}
+            fill
+            sizes="(max-width: 768px) 100vw, 896px"
+            className="object-cover"
           />
           {proyecto.imagenes.length > 1 && (
             <>
               <button
                 onClick={prevImage}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-brand-black/50 text-white p-2 hover:bg-teal-dark transition-colors"
+                aria-label="Imagen anterior"
+                className="absolute left-3 top-1/2 -translate-y-1/2 bg-brand-black/50 text-white p-3 hover:bg-teal-dark transition-colors"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={nextImage}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-brand-black/50 text-white p-2 hover:bg-teal-dark transition-colors"
+                aria-label="Imagen siguiente"
+                className="absolute right-3 top-1/2 -translate-y-1/2 bg-brand-black/50 text-white p-3 hover:bg-teal-dark transition-colors"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
@@ -89,7 +105,8 @@ export default function ProjectModal({
                   <button
                     key={i}
                     onClick={() => setCurrentImage(i)}
-                    className={`w-2 h-2 rounded-full transition-colors ${
+                    aria-label={`Imagen ${i + 1}`}
+                    className={`w-3 h-3 rounded-full transition-colors ${
                       i === currentImage ? "bg-teal-light" : "bg-white/50"
                     }`}
                   />
@@ -100,11 +117,11 @@ export default function ProjectModal({
         </div>
 
         {/* Info */}
-        <div className="p-8">
+        <div className="p-5 md:p-8">
           <span className="font-montserrat font-bold text-xs uppercase tracking-[0.2em] text-teal-dark">
             {proyecto.categoria}
           </span>
-          <h2 className="font-altivo text-3xl text-brand-black mt-2 mb-6 tracking-wide">
+          <h2 className="font-altivo text-2xl md:text-3xl text-brand-black mt-2 mb-6 tracking-wide">
             {proyecto.nombre}
           </h2>
 

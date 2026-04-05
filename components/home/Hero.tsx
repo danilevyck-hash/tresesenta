@@ -58,10 +58,11 @@ export default function Hero() {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="#C2B59B"
+          stroke="currentColor"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          className="text-sand"
           aria-hidden="true"
         >
           <polyline points="6 9 12 15 18 9" />

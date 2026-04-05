@@ -86,7 +86,7 @@ export default function CarreraContent({ carrera }: { carrera: Posicion[] }) {
               {activePositions.map((pos, i) => (
                 <div
                   key={pos.id}
-                  className="bg-white p-8 animate-on-scroll"
+                  className="bg-white p-8 animate-on-scroll hover:shadow-lg transition-shadow duration-300"
                   style={{ transitionDelay: `${i * 100}ms` }}
                 >
                   <h3 className="font-altivo text-xl text-brand-black mb-3 tracking-wide">
@@ -124,48 +124,63 @@ export default function CarreraContent({ carrera }: { carrera: Posicion[] }) {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6 animate-on-scroll">
-            <input
-              type="text"
-              placeholder="Nombre completo"
-              required
-              value={form.nombre}
-              onChange={(e) => setForm({ ...form, nombre: e.target.value })}
-              className="w-full border border-gray-300 px-4 py-3 font-montserrat text-sm focus:outline-none focus:border-teal-dark transition-colors"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              required
-              value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full border border-gray-300 px-4 py-3 font-montserrat text-sm focus:outline-none focus:border-teal-dark transition-colors"
-            />
-            <select
-              required
-              value={form.posicion}
-              onChange={(e) => setForm({ ...form, posicion: e.target.value })}
-              className="w-full border border-gray-300 px-4 py-3 font-montserrat text-sm focus:outline-none focus:border-teal-dark transition-colors text-gray-600"
-            >
-              <option value="">Selecciona una posición</option>
-              {activePositions.map((pos) => (
-                <option key={pos.id} value={pos.titulo}>
-                  {pos.titulo}
-                </option>
-              ))}
-              <option value="Aplicación espontánea">Aplicación espontánea</option>
-            </select>
-            <div className="border border-gray-300 px-4 py-3">
-              <label className="font-montserrat text-sm text-gray-500 block mb-2">
-                Adjunta tu CV (PDF)
-              </label>
+            <div>
+              <label className="font-montserrat font-bold text-xs uppercase tracking-[0.15em] text-gray-400 block mb-2">Nombre completo</label>
               <input
-                type="file"
-                accept=".pdf,.doc,.docx"
-                onChange={(e) =>
-                  setForm({ ...form, cv: e.target.files?.[0] || null })
-                }
-                className="font-montserrat text-sm"
+                type="text"
+                placeholder="Tu nombre"
+                required
+                value={form.nombre}
+                onChange={(e) => setForm({ ...form, nombre: e.target.value })}
+                className="w-full border border-gray-300 px-4 py-3 font-montserrat text-sm focus:outline-none focus:border-teal-dark transition-colors"
               />
+            </div>
+            <div>
+              <label className="font-montserrat font-bold text-xs uppercase tracking-[0.15em] text-gray-400 block mb-2">Email</label>
+              <input
+                type="email"
+                placeholder="correo@ejemplo.com"
+                required
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+                className="w-full border border-gray-300 px-4 py-3 font-montserrat text-sm focus:outline-none focus:border-teal-dark transition-colors"
+              />
+            </div>
+            <div>
+              <label className="font-montserrat font-bold text-xs uppercase tracking-[0.15em] text-gray-400 block mb-2">Posición</label>
+              <select
+                required
+                value={form.posicion}
+                onChange={(e) => setForm({ ...form, posicion: e.target.value })}
+                className="w-full border border-gray-300 px-4 py-3 font-montserrat text-sm focus:outline-none focus:border-teal-dark transition-colors text-gray-600"
+              >
+                <option value="">Selecciona una posición</option>
+                {activePositions.map((pos) => (
+                  <option key={pos.id} value={pos.titulo}>
+                    {pos.titulo}
+                  </option>
+                ))}
+                <option value="Aplicación espontánea">Aplicación espontánea</option>
+              </select>
+            </div>
+            <div>
+              <label className="font-montserrat font-bold text-xs uppercase tracking-[0.15em] text-gray-400 block mb-2">CV (máx. 10MB)</label>
+              <div className="border border-gray-300 px-4 py-3">
+                <input
+                  type="file"
+                  accept=".pdf,.doc,.docx"
+                  onChange={(e) => {
+                    const file = e.target.files?.[0];
+                    if (file && file.size > 10 * 1024 * 1024) {
+                      alert("El archivo no puede superar 10MB");
+                      e.target.value = "";
+                      return;
+                    }
+                    setForm({ ...form, cv: file || null });
+                  }}
+                  className="font-montserrat text-sm"
+                />
+              </div>
             </div>
             <div className="text-center">
               <button
@@ -182,7 +197,7 @@ export default function CarreraContent({ carrera }: { carrera: Posicion[] }) {
               </p>
             )}
             {status === "error" && (
-              <p className="text-center text-red-500 text-sm">
+              <p className="text-center text-sand text-sm">
                 Error al enviar. Intente nuevamente.
               </p>
             )}

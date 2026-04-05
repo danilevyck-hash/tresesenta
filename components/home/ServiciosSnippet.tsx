@@ -32,7 +32,7 @@ export default function ServiciosSnippet({ servicios }: { servicios: Servicio[] 
   return (
     <section className="py-28 px-4 bg-gray-bg relative overflow-hidden">
       {/* Mesh pattern - subtle */}
-      <div className="absolute inset-0 mesh-pattern opacity-20" />
+      <div className="absolute inset-0 mesh-pattern opacity-[0.08]" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">

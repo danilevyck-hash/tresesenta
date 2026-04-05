@@ -50,10 +50,10 @@ export default function NosotrosPage() {
 
       {/* Misión, Visión, Valores */}
       <section className="py-28 px-4 bg-gray-bg relative overflow-hidden">
-        <div className="absolute inset-0 mesh-pattern opacity-20" />
+        <div className="absolute inset-0 mesh-pattern opacity-[0.08]" />
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white animate-on-scroll">
+            <div className="bg-white animate-on-scroll hover:shadow-lg transition-shadow duration-300">
               <div className="h-1 bg-teal-dark" />
               <div className="p-8">
                 <h3 className="font-montserrat font-semibold text-xs uppercase tracking-[0.2em] text-teal-dark mb-4">
@@ -62,7 +62,7 @@ export default function NosotrosPage() {
                 <p className="font-montserrat text-gray-500 leading-relaxed">{content.general.mision}</p>
               </div>
             </div>
-            <div className="bg-white animate-on-scroll" style={{ transitionDelay: "100ms" }}>
+            <div className="bg-white animate-on-scroll hover:shadow-lg transition-shadow duration-300" style={{ transitionDelay: "100ms" }}>
               <div className="h-1 bg-sand" />
               <div className="p-8">
                 <h3 className="font-montserrat font-semibold text-xs uppercase tracking-[0.2em] text-teal-dark mb-4">
@@ -71,7 +71,7 @@ export default function NosotrosPage() {
                 <p className="font-montserrat text-gray-500 leading-relaxed">{content.general.vision}</p>
               </div>
             </div>
-            <div className="bg-white animate-on-scroll" style={{ transitionDelay: "200ms" }}>
+            <div className="bg-white animate-on-scroll hover:shadow-lg transition-shadow duration-300" style={{ transitionDelay: "200ms" }}>
               <div className="h-1 bg-teal-light" />
               <div className="p-8">
                 <h3 className="font-montserrat font-semibold text-xs uppercase tracking-[0.2em] text-teal-dark mb-4">
@@ -80,7 +80,7 @@ export default function NosotrosPage() {
                 <ul className="space-y-2">
                   {content.general.valores.map((v: string, i: number) => (
                     <li key={i} className="font-montserrat text-gray-500 text-sm flex items-start gap-2">
-                      <span className="text-sand mt-1">—</span>
+                      <span className="text-teal-dark mt-0.5">•</span>
                       {v}
                     </li>
                   ))}
@@ -112,13 +112,13 @@ export default function NosotrosPage() {
                 className="text-center animate-on-scroll"
                 style={{ transitionDelay: `${i * 100}ms` }}
               >
-                <div className="relative w-52 h-52 mx-auto mb-6 overflow-hidden rounded-full ring-2 ring-gray-bg">
+                <div className="relative w-40 h-40 md:w-52 md:h-52 mx-auto mb-6 overflow-hidden rounded-full ring-2 ring-gray-bg">
                   <Image
                     src={member.foto}
                     alt={member.nombre}
                     fill
                     className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                    sizes="208px"
+                    sizes="(max-width: 768px) 160px, 208px"
                   />
                 </div>
                 <h3 className="font-altivo text-lg text-brand-black tracking-wide">

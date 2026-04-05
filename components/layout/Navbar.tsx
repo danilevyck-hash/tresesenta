@@ -119,7 +119,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`font-montserrat font-semibold text-base uppercase tracking-[0.15em] transition-colors ${
+              className={`font-montserrat font-semibold text-sm uppercase tracking-[0.15em] transition-colors ${
                 pathname === link.href ? "text-teal-dark" : "text-brand-black hover:text-teal-dark"
               }`}
             >
