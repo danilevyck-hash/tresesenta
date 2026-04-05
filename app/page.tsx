@@ -5,6 +5,7 @@ import QuienesSomos from "@/components/home/QuienesSomos";
 import ServiciosSnippet from "@/components/home/ServiciosSnippet";
 import ProyectosGrid from "@/components/home/ProyectosGrid";
 import Metricas from "@/components/home/Metricas";
+import ClientesTicker from "@/components/home/ClientesTicker";
 import ContactForm from "@/components/home/ContactForm";
 
 export default function HomePage() {
@@ -15,6 +16,7 @@ export default function HomePage() {
       <ServiciosSnippet servicios={content.servicios} />
       <ProyectosGrid proyectos={content.proyectos} />
       <Metricas metricas={content.metricas} />
+      <ClientesTicker />
       <ContactForm />
     </ScrollAnimation>
   );
