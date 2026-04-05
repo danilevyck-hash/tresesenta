@@ -15,10 +15,10 @@ export default function ProjectFilter({
         <button
           key={cat}
           onClick={() => onChange(cat)}
-          className={`font-montserrat font-bold text-xs uppercase tracking-[0.15em] px-6 py-2 transition-colors ${
+          className={`font-montserrat font-semibold text-xs uppercase tracking-[0.15em] px-6 py-2.5 transition-colors ${
             active === cat
-              ? "bg-teal-dark text-white"
-              : "bg-gray-bg text-brand-black hover:bg-teal-light/30"
+              ? "bg-brand-black text-white"
+              : "bg-transparent text-gray-400 hover:text-brand-black border border-gray-200"
           }`}
         >
           {cat}

@@ -43,13 +43,15 @@ export default function ProyectosContent({ proyectos }: { proyectos: Proyecto[] 
           priority
         />
         <div className="absolute inset-0 bg-brand-black/70" />
+        <div className="absolute inset-0 monogram-pattern opacity-[0.03]" />
         <div className="relative z-10 text-center px-4">
-          <h1 className="font-montserrat font-semibold text-xs uppercase tracking-[0.3em] text-teal-light mb-4">
+          <h1 className="font-montserrat font-semibold text-xs uppercase tracking-[0.3em] text-sand mb-4">
             Portafolio
           </h1>
           <p className="font-altivo text-4xl md:text-5xl text-white tracking-wide">
             Nuestros Proyectos
           </p>
+          <div className="w-12 h-[2px] bg-sand mx-auto mt-6" />
         </div>
       </section>
 

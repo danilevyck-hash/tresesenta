@@ -45,20 +45,22 @@ export default function CarreraContent({ carrera }: { carrera: Posicion[] }) {
       {/* Hero */}
       <section className="relative h-[60vh] flex items-center justify-center">
         <Image
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920"
+          src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920"
           alt="Equipo de construcción en obra"
           fill
           className="object-cover"
           priority
         />
         <div className="absolute inset-0 bg-brand-black/70" />
+        <div className="absolute inset-0 monogram-pattern opacity-[0.03]" />
         <div className="relative z-10 text-center px-4">
-          <h1 className="font-montserrat font-semibold text-xs uppercase tracking-[0.3em] text-teal-light mb-4">
+          <h1 className="font-montserrat font-semibold text-xs uppercase tracking-[0.3em] text-sand mb-4">
             Carrera
           </h1>
           <p className="font-altivo text-4xl md:text-5xl text-white tracking-wide">
             Únete a Nuestro Equipo
           </p>
+          <div className="w-12 h-[2px] bg-sand mx-auto mt-6" />
         </div>
       </section>
 

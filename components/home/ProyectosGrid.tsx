@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import ProjectModal from "@/components/proyectos/ProjectModal";
 
 interface Proyecto {
@@ -21,8 +22,11 @@ export default function ProyectosGrid({ proyectos }: { proyectos: Proyecto[] }) 
   const [selected, setSelected] = useState<Proyecto | null>(null);
 
   return (
-    <section className="py-24 px-4">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-28 px-4 relative overflow-hidden">
+      {/* Monogram pattern accent */}
+      <div className="absolute top-0 right-0 w-80 h-80 monogram-pattern opacity-[0.03]" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-semibold text-xs uppercase tracking-[0.3em] text-teal-dark mb-4">
             Proyectos Destacados
@@ -30,6 +34,7 @@ export default function ProyectosGrid({ proyectos }: { proyectos: Proyecto[] }) 
           <p className="font-altivo text-3xl md:text-4xl text-brand-black tracking-wide">
             Obras que hablan por nosotros
           </p>
+          <div className="w-12 h-[2px] bg-sand mx-auto mt-6" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -46,8 +51,8 @@ export default function ProyectosGrid({ proyectos }: { proyectos: Proyecto[] }) 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
               />
               <div className="absolute inset-0 bg-teal-dark/0 group-hover:bg-teal-dark/60 transition-colors duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                <span className="font-montserrat font-semibold text-xs uppercase tracking-[0.2em] text-teal-light">
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                <span className="font-montserrat font-semibold text-xs uppercase tracking-[0.2em] text-sand">
                   {p.categoria}
                 </span>
                 <h3 className="font-altivo text-xl text-white mt-1 tracking-wide">
@@ -56,6 +61,15 @@ export default function ProyectosGrid({ proyectos }: { proyectos: Proyecto[] }) 
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-14">
+          <a
+            href="/proyectos"
+            className="inline-block border-2 border-brand-black text-brand-black font-montserrat font-semibold text-sm uppercase tracking-[0.15em] px-10 py-4 hover:bg-brand-black hover:text-white transition-colors"
+          >
+            Ver todos los proyectos
+          </a>
         </div>
       </div>
 

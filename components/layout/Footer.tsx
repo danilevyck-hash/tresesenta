@@ -5,19 +5,37 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-black text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-brand-black text-white relative overflow-hidden">
+      {/* Monogram pattern - very subtle */}
+      <div className="absolute inset-0 monogram-pattern opacity-[0.02]" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo & tagline */}
           <div className="md:col-span-2">
-            <Image
-              src="/brand/LOGOS/Tresesenta-36.png"
-              alt="3/60 Project Management"
-              width={80}
-              height={100}
-              className="brightness-0 invert object-contain"
-            />
-            <p className="mt-4 text-gray-400 font-montserrat text-sm max-w-md">
+            <div className="flex items-start gap-5">
+              <Image
+                src="/brand/LOGOS/Tresesenta-33.png"
+                alt="TL"
+                width={48}
+                height={48}
+                className="brightness-0 invert object-contain mt-1"
+              />
+              <div>
+                <Image
+                  src="/brand/LOGOS/Tresesenta-31.png"
+                  alt="TRESESENTA"
+                  width={180}
+                  height={28}
+                  className="brightness-0 invert object-contain"
+                />
+                <p className="font-montserrat text-xs uppercase tracking-[0.2em] text-white/40 mt-1">
+                  Project Management
+                </p>
+              </div>
+            </div>
+            <div className="w-10 h-[1px] bg-sand mt-6 mb-4" />
+            <p className="font-montserrat text-white/40 text-sm max-w-sm leading-relaxed">
               Firma de administración e inspección de proyectos de construcción.
               Garantizamos calidad, eficiencia y cumplimiento en cada obra.
             </p>
@@ -25,10 +43,10 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="font-montserrat font-semibold text-xs uppercase tracking-[0.2em] text-teal-light mb-4">
+            <h4 className="font-montserrat font-semibold text-xs uppercase tracking-[0.2em] text-sand mb-5">
               Navegación
             </h4>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-3">
               {[
                 { href: "/nosotros", label: "Nosotros" },
                 { href: "/servicios", label: "Servicios" },
@@ -38,7 +56,7 @@ export default function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-400 hover:text-white font-montserrat text-sm transition-colors"
+                  className="text-white/40 hover:text-white font-montserrat text-sm transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -48,10 +66,10 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-montserrat font-semibold text-xs uppercase tracking-[0.2em] text-teal-light mb-4">
+            <h4 className="font-montserrat font-semibold text-xs uppercase tracking-[0.2em] text-sand mb-5">
               Contacto
             </h4>
-            <div className="flex flex-col gap-2 text-gray-400 font-montserrat text-sm">
+            <div className="flex flex-col gap-3 text-white/40 font-montserrat text-sm">
               <a href="tel:+5073960360" className="hover:text-white transition-colors">
                 +507 396-0360
               </a>
@@ -60,12 +78,12 @@ export default function Footer() {
               </a>
               <p>Ciudad de Panamá, Panamá</p>
             </div>
-            <div className="flex gap-4 mt-4">
+            <div className="flex gap-4 mt-5">
               <a
                 href="https://instagram.com/tresesenta"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-teal-light transition-colors"
+                className="text-white/30 hover:text-sand transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -76,7 +94,7 @@ export default function Footer() {
                 href="https://linkedin.com/company/tresesenta"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-teal-light transition-colors"
+                className="text-white/30 hover:text-sand transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -87,8 +105,19 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 font-montserrat text-xs">
-          <p>© {new Date().getFullYear()} TRESESENTA. Todos los derechos reservados.</p>
+        <div className="border-t border-white/10 mt-14 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-white/30 font-montserrat text-xs tracking-wider">
+            © {new Date().getFullYear()} TRESESENTA. Todos los derechos reservados.
+          </p>
+          {/* Casco icon as brand accent */}
+          <Image
+            src="/brand/LOGOS/Tresesenta-37.png"
+            alt=""
+            width={24}
+            height={24}
+            className="brightness-0 invert opacity-20 object-contain"
+            aria-hidden="true"
+          />
         </div>
       </div>
     </footer>

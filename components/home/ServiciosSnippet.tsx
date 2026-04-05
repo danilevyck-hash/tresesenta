@@ -12,6 +12,15 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   shoppingCart: ShoppingCart,
 };
 
+const accentColors = [
+  "bg-teal-dark",
+  "bg-sand",
+  "bg-teal-light",
+  "bg-teal-dark",
+  "bg-sand",
+  "bg-teal-light",
+];
+
 interface Servicio {
   id: string;
   nombre: string;
@@ -21,9 +30,9 @@ interface Servicio {
 
 export default function ServiciosSnippet({ servicios }: { servicios: Servicio[] }) {
   return (
-    <section className="py-24 px-4 bg-gray-bg relative overflow-hidden">
-      {/* Mesh pattern */}
-      <div className="absolute inset-0 mesh-pattern opacity-30" />
+    <section className="py-28 px-4 bg-gray-bg relative overflow-hidden">
+      {/* Mesh pattern - subtle */}
+      <div className="absolute inset-0 mesh-pattern opacity-20" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
@@ -41,25 +50,29 @@ export default function ServiciosSnippet({ servicios }: { servicios: Servicio[] 
             return (
               <div
                 key={s.id}
-                className="bg-white p-8 hover:shadow-lg transition-shadow group"
+                className="bg-white hover:shadow-lg transition-all duration-300 group"
                 style={{ transitionDelay: `${i * 100}ms` }}
               >
-                <Icon className="w-10 h-10 text-teal-dark mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-altivo text-lg text-brand-black mb-2 tracking-wide">
-                  {s.nombre}
-                </h3>
-                <p className="font-montserrat text-gray-600 text-sm leading-relaxed line-clamp-3">
-                  {s.descripcion}
-                </p>
+                {/* Color accent bar */}
+                <div className={`h-1 ${accentColors[i]}`} />
+                <div className="p-8">
+                  <Icon className="w-10 h-10 text-teal-dark mb-4 group-hover:scale-110 transition-transform" />
+                  <h3 className="font-altivo text-lg text-brand-black mb-3 tracking-wide">
+                    {s.nombre}
+                  </h3>
+                  <p className="font-montserrat text-gray-500 text-sm leading-relaxed line-clamp-3">
+                    {s.descripcion}
+                  </p>
+                </div>
               </div>
             );
           })}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-14">
           <Link
             href="/servicios"
-            className="inline-block bg-teal-dark text-white font-montserrat font-semibold text-sm uppercase tracking-[0.15em] px-10 py-4 hover:bg-teal-light hover:text-brand-black transition-colors"
+            className="inline-block bg-teal-dark text-white font-montserrat font-semibold text-sm uppercase tracking-[0.15em] px-10 py-4 hover:bg-brand-black transition-colors"
           >
             Ver todos los servicios
           </Link>
