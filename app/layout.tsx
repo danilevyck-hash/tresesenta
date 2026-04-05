@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
+const montserrat = localFont({
+  src: [
+    {
+      path: "../public/fonts/Montserrat-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Montserrat-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+  ],
   variable: "--font-montserrat",
   display: "swap",
 });

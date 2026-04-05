@@ -31,16 +31,16 @@ body {
 
 /* Dot pattern background */
 .dot-pattern {
-  background-image: radial-gradient(circle, #00807E 1px, transparent 1px);
-  background-size: 20px 20px;
+  background-image: url("/patterns/pattern-dots.png");
+  background-size: 200px;
+  background-repeat: repeat;
 }
 
 /* Mesh grid pattern */
 .mesh-pattern {
-  background-image:
-    linear-gradient(to right, rgba(160, 205, 207, 0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(160, 205, 207, 0.1) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-image: url("/patterns/pattern-mesh.png");
+  background-size: 600px;
+  background-repeat: repeat;
 }
 
 /* Custom scrollbar */
