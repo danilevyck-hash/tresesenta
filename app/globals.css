@@ -137,8 +137,9 @@ button:focus-visible {
   border-radius: 2px;
 }
 
-/* Image loading skeleton */
-[data-nimg] {
+/* Image loading skeleton — only on project cards */
+.aspect-\[4\/3\] [data-nimg],
+.aspect-video [data-nimg] {
   background: var(--gray-bg);
 }
 
