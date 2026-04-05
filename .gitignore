@@ -34,3 +34,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+public/brand/360_curvas.ai
+public/brand/360_editable.ai
+public/brand/360_BRANDBOOK.pdf
+public/brand/MOCKUPS/
+public/brand/TEMPLATES/
+public/brand/Firmas.docx
+public/brand/PATTERNS/PATTERNS.pdf
