@@ -309,6 +309,7 @@ function ProyectosEditor({
       descripcion: "",
       servicios: [],
       imagenes: [],
+      logoCliente: "",
     };
     update("proyectos", [...content.proyectos, newP]);
     setExpandedId(newP.id);
@@ -424,7 +425,37 @@ function ProyectosEditor({
                 </div>
                 <InputField label="Ubicación" value={p.ubicacion} onChange={(v) => updateProject(p.id, "ubicacion", v)} />
                 <InputField label="Periodo" value={p.periodo} onChange={(v) => updateProject(p.id, "periodo", v)} />
-                <InputField label="Promotor" value={p.promotor} onChange={(v) => updateProject(p.id, "promotor", v)} />
+                <InputField label="Promotor / Cliente" value={p.promotor} onChange={(v) => updateProject(p.id, "promotor", v)} />
+                <div>
+                  <label className="font-montserrat font-bold text-xs uppercase tracking-wider text-gray-400 block mb-1">
+                    Logo del Cliente
+                  </label>
+                  <div className="flex items-center gap-3">
+                    {p.logoCliente && (
+                      <div className="relative group">
+                        <img src={p.logoCliente} alt="" className="h-12 w-auto object-contain border border-gray-200 bg-white p-1" />
+                        <button
+                          onClick={() => updateProject(p.id, "logoCliente", "")}
+                          className="absolute -top-1 -right-1 bg-red-500 text-white p-0.5 opacity-0 group-hover:opacity-100 transition-opacity"
+                        >
+                          <Trash2 className="w-3 h-3" />
+                        </button>
+                      </div>
+                    )}
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={async (e) => {
+                        const file = e.target.files?.[0];
+                        if (file) {
+                          const url = await uploadFile(file, "clientes");
+                          if (url) updateProject(p.id, "logoCliente", url);
+                        }
+                      }}
+                      className="font-montserrat text-sm"
+                    />
+                  </div>
+                </div>
                 <InputField label="Inversión" value={p.inversion} onChange={(v) => updateProject(p.id, "inversion", v)} />
                 <InputField label="Área" value={p.area} onChange={(v) => updateProject(p.id, "area", v)} />
               </div>

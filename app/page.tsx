@@ -16,7 +16,7 @@ export default function HomePage() {
       <ServiciosSnippet servicios={content.servicios} />
       <ProyectosGrid proyectos={content.proyectos} />
       <Metricas metricas={content.metricas} />
-      <ClientesTicker />
+      <ClientesTicker proyectos={content.proyectos} />
       <ContactForm />
     </ScrollAnimation>
   );
