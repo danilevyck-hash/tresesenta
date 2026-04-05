@@ -46,10 +46,10 @@ export default function ServiciosContent({ servicios }: { servicios: Servicio[] 
         />
         <div className="absolute inset-0 bg-brand-black/70" />
         <div className="relative z-10 text-center px-4">
-          <h1 className="font-montserrat font-bold text-xs uppercase tracking-[0.3em] text-teal-light mb-4">
+          <h1 className="font-montserrat font-semibold text-xs uppercase tracking-[0.3em] text-teal-light mb-4">
             Servicios
           </h1>
-          <p className="font-montserrat text-4xl md:text-5xl text-white font-semibold">
+          <p className="font-altivo text-4xl md:text-5xl text-white tracking-wide">
             Nuestros Servicios
           </p>
         </div>
@@ -75,7 +75,7 @@ export default function ServiciosContent({ servicios }: { servicios: Servicio[] 
                 >
                   <Icon className="w-10 h-10 text-teal-dark flex-shrink-0 group-hover:scale-110 transition-transform" />
                   <div className="flex-1">
-                    <h3 className="font-montserrat font-semibold text-xl text-brand-black group-hover:text-teal-dark transition-colors">
+                    <h3 className="font-altivo text-xl text-brand-black group-hover:text-teal-dark transition-colors tracking-wide">
                       {s.nombre}
                     </h3>
                   </div>

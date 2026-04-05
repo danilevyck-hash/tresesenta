@@ -14,7 +14,6 @@
 body {
   color: var(--black);
   background: var(--white);
-  font-family: "Montserrat", sans-serif;
 }
 
 /* Scroll animations */
@@ -29,17 +28,24 @@ body {
   transform: translateY(0);
 }
 
-/* Dot pattern background */
+/* Dot pattern background (teal squares grid) */
 .dot-pattern {
   background-image: url("/patterns/pattern-dots.png");
   background-size: 200px;
   background-repeat: repeat;
 }
 
-/* Mesh grid pattern */
+/* Mesh grid pattern (teal-light waves) */
 .mesh-pattern {
   background-image: url("/patterns/pattern-mesh.png");
   background-size: 600px;
+  background-repeat: repeat;
+}
+
+/* Monogram pattern (TL gold on white) */
+.monogram-pattern {
+  background-image: url("/patterns/pattern-monogram.png");
+  background-size: 400px;
   background-repeat: repeat;
 }
 

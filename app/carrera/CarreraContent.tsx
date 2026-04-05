@@ -53,10 +53,10 @@ export default function CarreraContent({ carrera }: { carrera: Posicion[] }) {
         />
         <div className="absolute inset-0 bg-brand-black/70" />
         <div className="relative z-10 text-center px-4">
-          <h1 className="font-montserrat font-bold text-xs uppercase tracking-[0.3em] text-teal-light mb-4">
+          <h1 className="font-montserrat font-semibold text-xs uppercase tracking-[0.3em] text-teal-light mb-4">
             Carrera
           </h1>
-          <p className="font-montserrat text-4xl md:text-5xl text-white font-semibold">
+          <p className="font-altivo text-4xl md:text-5xl text-white tracking-wide">
             Únete a Nuestro Equipo
           </p>
         </div>
@@ -87,7 +87,7 @@ export default function CarreraContent({ carrera }: { carrera: Posicion[] }) {
                   className="bg-white p-8 animate-on-scroll"
                   style={{ transitionDelay: `${i * 100}ms` }}
                 >
-                  <h3 className="font-montserrat font-semibold text-xl text-brand-black mb-3">
+                  <h3 className="font-altivo text-xl text-brand-black mb-3 tracking-wide">
                     {pos.titulo}
                   </h3>
                   <p className="text-gray-600 mb-4">{pos.descripcion}</p>
@@ -116,7 +116,7 @@ export default function CarreraContent({ carrera }: { carrera: Posicion[] }) {
             <h2 className="font-montserrat font-bold text-xs uppercase tracking-[0.3em] text-teal-dark mb-4">
               Aplica Ahora
             </h2>
-            <p className="font-montserrat text-3xl text-brand-black font-semibold">
+            <p className="font-altivo text-3xl text-brand-black tracking-wide">
               Envía tu aplicación
             </p>
           </div>

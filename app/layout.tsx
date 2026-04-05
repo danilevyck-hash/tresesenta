@@ -4,6 +4,12 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
+const altivo = localFont({
+  src: "../public/fonts/Altivo.otf",
+  variable: "--font-altivo",
+  display: "swap",
+});
+
 const montserrat = localFont({
   src: [
     {
@@ -18,6 +24,12 @@ const montserrat = localFont({
     },
   ],
   variable: "--font-montserrat",
+  display: "swap",
+});
+
+const dinCondensed = localFont({
+  src: "../public/fonts/DINCondensed.ttf",
+  variable: "--font-din",
   display: "swap",
 });
 
@@ -78,7 +90,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className={`${montserrat.variable} font-montserrat antialiased`}>
+      <body className={`${altivo.variable} ${montserrat.variable} ${dinCondensed.variable} font-montserrat antialiased`}>
         <Navbar />
         <main>{children}</main>
         <Footer />

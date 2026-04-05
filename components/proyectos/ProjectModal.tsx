@@ -104,7 +104,7 @@ export default function ProjectModal({
           <span className="font-montserrat font-bold text-xs uppercase tracking-[0.2em] text-teal-dark">
             {proyecto.categoria}
           </span>
-          <h2 className="font-montserrat font-semibold text-3xl text-brand-black mt-2 mb-6">
+          <h2 className="font-altivo text-3xl text-brand-black mt-2 mb-6 tracking-wide">
             {proyecto.nombre}
           </h2>
 

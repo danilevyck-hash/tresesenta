@@ -16,10 +16,10 @@ export default function Metricas({ metricas }: { metricas: Metrica[] }) {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {metricas.map((m, i) => (
             <div key={i} className="text-center">
-              <div className="font-montserrat font-bold text-4xl md:text-5xl text-teal-light mb-2">
+              <div className="font-din font-bold text-4xl md:text-5xl text-teal-light mb-2">
                 {m.valor}
               </div>
-              <div className="font-montserrat font-bold text-xs uppercase tracking-[0.2em] text-gray-400">
+              <div className="font-montserrat font-semibold text-xs uppercase tracking-[0.2em] text-gray-400">
                 {m.label}
               </div>
             </div>

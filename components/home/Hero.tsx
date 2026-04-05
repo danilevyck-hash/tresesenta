@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Logo from "@/components/ui/Logo";
 import Link from "next/link";
 
 export default function Hero() {
@@ -23,22 +22,41 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-20 text-center px-4">
-        <div className="flex justify-center mb-8">
-          <Logo color="white" size="large" />
+        {/* TL Logotype */}
+        <div className="flex justify-center mb-6">
+          <Image
+            src="/brand/LOGOS/Tresesenta-33.png"
+            alt="TL"
+            width={100}
+            height={100}
+            className="brightness-0 invert object-contain"
+            priority
+          />
         </div>
-        <p className="font-montserrat text-white text-lg md:text-2xl tracking-wider max-w-2xl mx-auto mb-10 font-light">
-          Administración e Inspección de Proyectos de Construcción
+        {/* Primary logo text */}
+        <div className="flex justify-center mb-8">
+          <Image
+            src="/brand/LOGOS/Tresesenta-31.png"
+            alt="TRESESENTA"
+            width={360}
+            height={60}
+            className="brightness-0 invert object-contain"
+            priority
+          />
+        </div>
+        <p className="font-montserrat text-white text-lg md:text-2xl tracking-[0.2em] max-w-2xl mx-auto mb-10 font-light uppercase">
+          Project Management
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/#contacto"
-            className="inline-block bg-teal-dark text-white font-montserrat font-bold text-sm uppercase tracking-[0.2em] px-10 py-4 hover:bg-teal-light hover:text-brand-black transition-colors"
+            className="inline-block bg-sand text-brand-black font-montserrat font-semibold text-sm uppercase tracking-[0.2em] px-10 py-4 hover:bg-white transition-colors"
           >
             Contáctenos
           </Link>
           <Link
             href="/proyectos"
-            className="inline-block border-2 border-white/40 text-white font-montserrat font-bold text-sm uppercase tracking-[0.2em] px-10 py-4 hover:border-white hover:bg-white/10 transition-colors"
+            className="inline-block border-2 border-white/40 text-white font-montserrat font-semibold text-sm uppercase tracking-[0.2em] px-10 py-4 hover:border-white hover:bg-white/10 transition-colors"
           >
             Ver Proyectos
           </Link>

@@ -44,10 +44,10 @@ export default function ProyectosContent({ proyectos }: { proyectos: Proyecto[] 
         />
         <div className="absolute inset-0 bg-brand-black/70" />
         <div className="relative z-10 text-center px-4">
-          <h1 className="font-montserrat font-bold text-xs uppercase tracking-[0.3em] text-teal-light mb-4">
+          <h1 className="font-montserrat font-semibold text-xs uppercase tracking-[0.3em] text-teal-light mb-4">
             Portafolio
           </h1>
-          <p className="font-montserrat text-4xl md:text-5xl text-white font-semibold">
+          <p className="font-altivo text-4xl md:text-5xl text-white tracking-wide">
             Nuestros Proyectos
           </p>
         </div>

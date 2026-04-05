@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import Logo from "@/components/ui/Logo";
 
 const navLinks = [
   { href: "/", label: "Inicio" },
@@ -42,10 +42,12 @@ export default function Navbar() {
     setMobileOpen(false);
   }, [pathname]);
 
+  const showDark = scrolled || mobileOpen;
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || mobileOpen
+        showDark
           ? "bg-white shadow-md"
           : "bg-transparent"
       }`}
@@ -53,7 +55,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" aria-label="TRESESENTA - Inicio">
-            <Logo color={scrolled || mobileOpen ? "dark" : "white"} />
+            <Image
+              src="/brand/LOGOS/Tresesenta-32.png"
+              alt="TRESESENTA Project Management"
+              width={176}
+              height={44}
+              className={`object-contain ${showDark ? "" : "brightness-0 invert"}`}
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -62,7 +71,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-montserrat font-bold text-xs uppercase tracking-[0.15em] transition-colors ${
+                className={`font-montserrat font-semibold text-xs uppercase tracking-[0.15em] transition-colors ${
                   scrolled
                     ? "text-brand-black hover:text-teal-dark"
                     : "text-white hover:text-teal-light"
@@ -82,17 +91,17 @@ export default function Navbar() {
           >
             <span
               className={`block w-6 h-0.5 transition-all duration-300 origin-center ${
-                scrolled || mobileOpen ? "bg-brand-black" : "bg-white"
+                showDark ? "bg-brand-black" : "bg-white"
               } ${mobileOpen ? "rotate-45 translate-y-[4px]" : ""}`}
             />
             <span
               className={`block w-6 h-0.5 transition-all duration-300 ${
-                scrolled || mobileOpen ? "bg-brand-black" : "bg-white"
+                showDark ? "bg-brand-black" : "bg-white"
               } ${mobileOpen ? "opacity-0 scale-0" : ""}`}
             />
             <span
               className={`block w-6 h-0.5 transition-all duration-300 origin-center ${
-                scrolled || mobileOpen ? "bg-brand-black" : "bg-white"
+                showDark ? "bg-brand-black" : "bg-white"
               } ${mobileOpen ? "-rotate-45 -translate-y-[4px]" : ""}`}
             />
           </button>
@@ -110,7 +119,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`font-montserrat font-bold text-base uppercase tracking-[0.15em] transition-colors ${
+              className={`font-montserrat font-semibold text-base uppercase tracking-[0.15em] transition-colors ${
                 pathname === link.href ? "text-teal-dark" : "text-brand-black hover:text-teal-dark"
               }`}
             >

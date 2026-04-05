@@ -24,10 +24,10 @@ export default function ProyectosGrid({ proyectos }: { proyectos: Proyecto[] }) 
     <section className="py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-montserrat font-bold text-xs uppercase tracking-[0.3em] text-teal-dark mb-4">
+          <h2 className="font-montserrat font-semibold text-xs uppercase tracking-[0.3em] text-teal-dark mb-4">
             Proyectos Destacados
           </h2>
-          <p className="font-montserrat text-3xl md:text-4xl text-brand-black font-semibold">
+          <p className="font-altivo text-3xl md:text-4xl text-brand-black tracking-wide">
             Obras que hablan por nosotros
           </p>
         </div>
@@ -47,10 +47,10 @@ export default function ProyectosGrid({ proyectos }: { proyectos: Proyecto[] }) 
               />
               <div className="absolute inset-0 bg-teal-dark/0 group-hover:bg-teal-dark/60 transition-colors duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                <span className="font-montserrat font-bold text-xs uppercase tracking-[0.2em] text-teal-light">
+                <span className="font-montserrat font-semibold text-xs uppercase tracking-[0.2em] text-teal-light">
                   {p.categoria}
                 </span>
-                <h3 className="font-montserrat font-semibold text-xl text-white mt-1">
+                <h3 className="font-altivo text-xl text-white mt-1 tracking-wide">
                   {p.nombre}
                 </h3>
               </div>

@@ -16,7 +16,9 @@ const config: Config = {
         "gray-bg": "#F2F2F0",
       },
       fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"],
+        altivo: ["var(--font-altivo)", "sans-serif"],
+        montserrat: ["var(--font-montserrat)", "sans-serif"],
+        din: ["var(--font-din)", "sans-serif"],
       },
     },
   },

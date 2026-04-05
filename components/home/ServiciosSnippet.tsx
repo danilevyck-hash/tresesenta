@@ -23,14 +23,14 @@ export default function ServiciosSnippet({ servicios }: { servicios: Servicio[] 
   return (
     <section className="py-24 px-4 bg-gray-bg relative overflow-hidden">
       {/* Mesh pattern */}
-      <div className="absolute inset-0 mesh-pattern" />
+      <div className="absolute inset-0 mesh-pattern opacity-30" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="font-montserrat font-bold text-xs uppercase tracking-[0.3em] text-teal-dark mb-4">
+          <h2 className="font-montserrat font-semibold text-xs uppercase tracking-[0.3em] text-teal-dark mb-4">
             Nuestros Servicios
           </h2>
-          <p className="font-montserrat text-3xl md:text-4xl text-brand-black font-semibold">
+          <p className="font-altivo text-3xl md:text-4xl text-brand-black tracking-wide">
             Soluciones integrales para su proyecto
           </p>
         </div>
@@ -45,10 +45,10 @@ export default function ServiciosSnippet({ servicios }: { servicios: Servicio[] 
                 style={{ transitionDelay: `${i * 100}ms` }}
               >
                 <Icon className="w-10 h-10 text-teal-dark mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-montserrat font-semibold text-lg text-brand-black mb-2">
+                <h3 className="font-altivo text-lg text-brand-black mb-2 tracking-wide">
                   {s.nombre}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                <p className="font-montserrat text-gray-600 text-sm leading-relaxed line-clamp-3">
                   {s.descripcion}
                 </p>
               </div>
@@ -59,7 +59,7 @@ export default function ServiciosSnippet({ servicios }: { servicios: Servicio[] 
         <div className="text-center mt-12">
           <Link
             href="/servicios"
-            className="inline-block bg-teal-dark text-white font-montserrat font-bold text-sm uppercase tracking-[0.15em] px-10 py-4 hover:bg-teal-light hover:text-brand-black transition-colors"
+            className="inline-block bg-teal-dark text-white font-montserrat font-semibold text-sm uppercase tracking-[0.15em] px-10 py-4 hover:bg-teal-light hover:text-brand-black transition-colors"
           >
             Ver todos los servicios
           </Link>

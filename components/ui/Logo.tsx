@@ -9,16 +9,16 @@ export default function Logo({
   color?: "white" | "dark";
   size?: "default" | "large";
 }) {
-  const height = size === "large" ? 60 : 40;
-  const width = size === "large" ? 240 : 160;
+  const height = size === "large" ? 80 : 44;
+  const width = size === "large" ? 320 : 176;
 
   return (
     <Image
-      src="/logo-dark.png"
+      src="/brand/LOGOS/Tresesenta-32.png"
       alt="TRESESENTA Project Management"
       width={width}
       height={height}
-      className={color === "white" ? "brightness-0 invert" : ""}
+      className={`object-contain ${color === "white" ? "brightness-0 invert" : ""}`}
       priority
     />
   );

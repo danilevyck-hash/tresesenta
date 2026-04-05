@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Logo from "@/components/ui/Logo";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -10,8 +10,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo & tagline */}
           <div className="md:col-span-2">
-            <Logo color="white" />
-            <p className="mt-4 text-gray-400 text-sm max-w-md">
+            <Image
+              src="/brand/LOGOS/Tresesenta-36.png"
+              alt="3/60 Project Management"
+              width={80}
+              height={100}
+              className="brightness-0 invert object-contain"
+            />
+            <p className="mt-4 text-gray-400 font-montserrat text-sm max-w-md">
               Firma de administración e inspección de proyectos de construcción.
               Garantizamos calidad, eficiencia y cumplimiento en cada obra.
             </p>
@@ -19,7 +25,7 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="font-montserrat font-bold text-xs uppercase tracking-[0.2em] text-teal-light mb-4">
+            <h4 className="font-montserrat font-semibold text-xs uppercase tracking-[0.2em] text-teal-light mb-4">
               Navegación
             </h4>
             <div className="flex flex-col gap-2">
@@ -32,7 +38,7 @@ export default function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-gray-400 hover:text-white font-montserrat text-sm transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -42,10 +48,10 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-montserrat font-bold text-xs uppercase tracking-[0.2em] text-teal-light mb-4">
+            <h4 className="font-montserrat font-semibold text-xs uppercase tracking-[0.2em] text-teal-light mb-4">
               Contacto
             </h4>
-            <div className="flex flex-col gap-2 text-gray-400 text-sm">
+            <div className="flex flex-col gap-2 text-gray-400 font-montserrat text-sm">
               <a href="tel:+5073960360" className="hover:text-white transition-colors">
                 +507 396-0360
               </a>
@@ -81,7 +87,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-xs">
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 font-montserrat text-xs">
           <p>© {new Date().getFullYear()} TRESESENTA. Todos los derechos reservados.</p>
         </div>
       </div>

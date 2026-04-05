@@ -40,10 +40,10 @@ export default function ContactForm() {
       <div className="absolute inset-0 bg-brand-black/85" />
       <div className="max-w-2xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <h2 className="font-montserrat font-bold text-xs uppercase tracking-[0.3em] text-teal-light mb-4">
+          <h2 className="font-montserrat font-semibold text-xs uppercase tracking-[0.3em] text-teal-light mb-4">
             Contacto
           </h2>
-          <p className="font-montserrat text-3xl md:text-4xl text-white font-semibold">
+          <p className="font-altivo text-3xl md:text-4xl text-white tracking-wide">
             ¿Tiene un proyecto en mente?
           </p>
           <p className="font-montserrat text-gray-400 mt-3 text-sm">
@@ -89,18 +89,18 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="bg-teal-dark text-white font-montserrat font-bold text-sm uppercase tracking-[0.15em] px-10 py-4 hover:bg-teal-light hover:text-brand-black transition-colors disabled:opacity-50"
+              className="bg-sand text-brand-black font-montserrat font-semibold text-sm uppercase tracking-[0.15em] px-10 py-4 hover:bg-white transition-colors disabled:opacity-50"
             >
               {status === "sending" ? "Enviando..." : "Enviar mensaje"}
             </button>
           </div>
           {status === "sent" && (
-            <p className="text-center text-teal-light text-sm">
+            <p className="text-center text-teal-light font-montserrat text-sm">
               ¡Mensaje enviado! Nos pondremos en contacto pronto.
             </p>
           )}
           {status === "error" && (
-            <p className="text-center text-red-400 text-sm">
+            <p className="text-center text-red-400 font-montserrat text-sm">
               Error al enviar. Intente nuevamente.
             </p>
           )}

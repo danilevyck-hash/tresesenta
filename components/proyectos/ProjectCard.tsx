@@ -29,7 +29,7 @@ export default function ProjectCard({
         <span className="font-montserrat font-bold text-xs uppercase tracking-[0.2em] text-teal-light">
           {proyecto.categoria}
         </span>
-        <h3 className="font-montserrat font-semibold text-xl text-white mt-1">
+        <h3 className="font-altivo text-xl text-white mt-1 tracking-wide">
           {proyecto.nombre}
         </h3>
       </div>
