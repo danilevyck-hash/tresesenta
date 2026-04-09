@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 export default function ContactForm() {
-  const [form, setForm] = useState({ nombre: "", email: "", telefono: "", mensaje: "", website: "" });
+  const [form, setForm] = useState({ nombre: "", email: "", telefono: "", tipoProyecto: "", mensaje: "", website: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -20,7 +20,7 @@ export default function ContactForm() {
       if (!res.ok) throw new Error();
 
       setStatus("sent");
-      setForm({ nombre: "", email: "", telefono: "", mensaje: "", website: "" });
+      setForm({ nombre: "", email: "", telefono: "", tipoProyecto: "", mensaje: "", website: "" });
     } catch {
       setStatus("error");
     }
@@ -90,6 +90,22 @@ export default function ContactForm() {
               onChange={(e) => setForm({ ...form, telefono: e.target.value })}
               className="w-full bg-white/5 border border-white/15 text-white placeholder-white/30 px-5 py-4 font-montserrat text-sm focus:outline-none focus:border-sand transition-colors"
             />
+          </div>
+          <div>
+            <label className="font-montserrat font-semibold text-xs uppercase tracking-[0.15em] text-white/40 block mb-2">Tipo de proyecto</label>
+            <select
+              value={form.tipoProyecto}
+              onChange={(e) => setForm({ ...form, tipoProyecto: e.target.value })}
+              className="w-full bg-white/5 border border-white/15 text-white px-5 py-4 font-montserrat text-sm focus:outline-none focus:border-sand transition-colors appearance-none"
+            >
+              <option value="" className="bg-brand-black">Seleccione un tipo</option>
+              <option value="Residencial" className="bg-brand-black">Residencial</option>
+              <option value="Comercial" className="bg-brand-black">Comercial</option>
+              <option value="Hotelería" className="bg-brand-black">Hotelería</option>
+              <option value="Industrial" className="bg-brand-black">Industrial</option>
+              <option value="Institucional" className="bg-brand-black">Institucional</option>
+              <option value="Otro" className="bg-brand-black">Otro</option>
+            </select>
           </div>
           <div>
             <label className="font-montserrat font-semibold text-xs uppercase tracking-[0.15em] text-white/40 block mb-2">Mensaje</label>

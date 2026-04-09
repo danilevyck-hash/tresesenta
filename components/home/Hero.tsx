@@ -39,6 +39,10 @@ export default function Hero() {
         {/* Divider line */}
         <div className="w-16 h-[2px] bg-sand mx-auto mb-8" />
 
+        <h1 className="sr-only">
+          Gerencia e Inspección de Proyectos de Construcción en Panamá — TRESESENTA
+        </h1>
+
         <p className="font-montserrat text-white/80 text-base md:text-lg tracking-[0.15em] max-w-xl mx-auto mb-12 leading-relaxed">
           Administración e inspección integral de proyectos de construcción en Panamá
         </p>

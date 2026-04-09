@@ -3,6 +3,7 @@ import ScrollAnimation from "@/components/ScrollAnimation";
 import Hero from "@/components/home/Hero";
 import QuienesSomos from "@/components/home/QuienesSomos";
 import ServiciosSnippet from "@/components/home/ServiciosSnippet";
+import PorQueNosotros from "@/components/home/PorQueNosotros";
 import ProyectosGrid from "@/components/home/ProyectosGrid";
 import Metricas from "@/components/home/Metricas";
 import ClientesTicker from "@/components/home/ClientesTicker";
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Hero />
       <QuienesSomos texto={content.general.quienesSomos} />
       <ServiciosSnippet servicios={content.servicios} />
+      <PorQueNosotros />
       <ProyectosGrid proyectos={content.proyectos} />
       <Metricas metricas={content.metricas} />
       <ClientesTicker proyectos={content.proyectos} />

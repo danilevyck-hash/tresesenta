@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import WhatsAppButton from "@/components/layout/WhatsAppButton";
 
 const altivo = localFont({
   src: "../public/fonts/Altivo.otf",
@@ -90,10 +91,38 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": ["Organization", "LocalBusiness"],
+              name: "TRESESENTA",
+              description:
+                "Firma panameña de administración e inspección de proyectos de construcción. Gerencia de proyectos, inspección técnica, preconstrucción y control de calidad.",
+              url: "https://tresesenta.com",
+              telephone: "+507 396-0360",
+              email: "info@tresesenta.com",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Ciudad de Panamá",
+                addressCountry: "PA",
+              },
+              sameAs: [
+                "https://instagram.com/tresesenta",
+                "https://linkedin.com/company/tresesenta",
+                "https://facebook.com/tresesenta",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body className={`${altivo.variable} ${montserrat.variable} ${dinCondensed.variable} font-montserrat antialiased`}>
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

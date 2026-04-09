@@ -4,7 +4,7 @@ import { getContent, saveContent } from "@/lib/content";
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { nombre, email, telefono, mensaje, website } = body;
+    const { nombre, email, telefono, tipoProyecto, mensaje, website } = body;
 
     // Honeypot anti-bot
     if (website) {
@@ -21,6 +21,7 @@ export async function POST(req: NextRequest) {
       nombre,
       email,
       telefono: telefono || "",
+      tipoProyecto: tipoProyecto || "",
       mensaje,
       fecha: new Date().toISOString(),
       leido: false,

@@ -161,6 +161,23 @@ export default function ProjectModal({
               ))}
             </div>
           </div>
+
+          {/* CTA */}
+          <div className="mt-8 pt-6 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="font-montserrat text-sm text-gray-600">
+              &iquest;Interesado en un proyecto similar?
+            </p>
+            <a
+              href="/#contacto"
+              onClick={(e) => {
+                e.stopPropagation();
+                onClose();
+              }}
+              className="inline-block bg-teal-dark text-white font-montserrat font-semibold text-xs uppercase tracking-[0.2em] px-8 py-3 hover:bg-teal-light transition-colors"
+            >
+              Cont&aacute;ctenos
+            </a>
+          </div>
         </div>
       </div>
     </div>
