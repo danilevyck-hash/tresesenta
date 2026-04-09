@@ -140,21 +140,21 @@
       "nombre": "Carlos Méndez",
       "cargo": "Director General",
       "foto": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
-      "linkedin": "https://linkedin.com/in/"
+      "linkedin": ""
     },
     {
       "id": "maria-rodriguez",
       "nombre": "María Rodríguez",
       "cargo": "Directora de Operaciones",
       "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400",
-      "linkedin": "https://linkedin.com/in/"
+      "linkedin": ""
     },
     {
       "id": "alejandro-torres",
       "nombre": "Alejandro Torres",
       "cargo": "Gerente de Inspección",
       "foto": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400",
-      "linkedin": "https://linkedin.com/in/"
+      "linkedin": ""
     }
   ],
   "metricas": [

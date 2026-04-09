@@ -13,7 +13,7 @@ interface Posicion {
 }
 
 export default function CarreraContent({ carrera }: { carrera: Posicion[] }) {
-  const [form, setForm] = useState({ nombre: "", email: "", posicion: "", cv: null as File | null });
+  const [form, setForm] = useState({ nombre: "", email: "", posicion: "", cv: null as File | null, website: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   useScrollAnimation();
 
@@ -29,12 +29,13 @@ export default function CarreraContent({ carrera }: { carrera: Posicion[] }) {
       fd.append("email", form.email);
       fd.append("posicion", form.posicion);
       if (form.cv) fd.append("cv", form.cv);
+      if (form.website) fd.append("website", form.website);
 
       const res = await fetch("/api/apply", { method: "POST", body: fd });
       if (!res.ok) throw new Error();
 
       setStatus("sent");
-      setForm({ nombre: "", email: "", posicion: "", cv: null });
+      setForm({ nombre: "", email: "", posicion: "", cv: null, website: "" });
     } catch {
       setStatus("error");
     }
@@ -124,6 +125,8 @@ export default function CarreraContent({ carrera }: { carrera: Posicion[] }) {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6 animate-on-scroll">
+            {/* Honeypot anti-bot */}
+            <input name="website" className="hidden" tabIndex={-1} autoComplete="off" value={form.website ?? ""} onChange={(e) => setForm({ ...form, website: e.target.value })} />
             <div>
               <label className="font-montserrat font-bold text-xs uppercase tracking-[0.15em] text-gray-400 block mb-2">Nombre completo</label>
               <input
@@ -168,7 +171,7 @@ export default function CarreraContent({ carrera }: { carrera: Posicion[] }) {
               <div className="border border-gray-300 px-4 py-3">
                 <input
                   type="file"
-                  accept=".pdf,.doc,.docx"
+                  accept=".pdf"
                   onChange={(e) => {
                     const file = e.target.files?.[0];
                     if (file && file.size > 10 * 1024 * 1024) {

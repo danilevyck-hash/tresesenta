@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 export default function ContactForm() {
-  const [form, setForm] = useState({ nombre: "", email: "", telefono: "", mensaje: "" });
+  const [form, setForm] = useState({ nombre: "", email: "", telefono: "", mensaje: "", website: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -20,7 +20,7 @@ export default function ContactForm() {
       if (!res.ok) throw new Error();
 
       setStatus("sent");
-      setForm({ nombre: "", email: "", telefono: "", mensaje: "" });
+      setForm({ nombre: "", email: "", telefono: "", mensaje: "", website: "" });
     } catch {
       setStatus("error");
     }
@@ -55,6 +55,8 @@ export default function ContactForm() {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
+          {/* Honeypot anti-bot */}
+          <input name="website" className="hidden" tabIndex={-1} autoComplete="off" value={form.website ?? ""} onChange={(e) => setForm({ ...form, website: e.target.value })} />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
               <label className="font-montserrat font-semibold text-xs uppercase tracking-[0.15em] text-white/40 block mb-2">Nombre</label>

@@ -15,8 +15,17 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Campos requeridos" }, { status: 400 });
     }
 
+    // Honeypot anti-bot
+    const website = formData.get("website") as string;
+    if (website) {
+      return NextResponse.json({ success: true });
+    }
+
     let cvUrl = "";
     if (file && file.size > 0) {
+      if (file.type !== "application/pdf") {
+        return NextResponse.json({ error: "Solo se aceptan archivos PDF" }, { status: 400 });
+      }
       const bytes = await file.arrayBuffer();
       const buffer = Buffer.from(bytes);
       const uploadDir = path.join(process.cwd(), "public", "uploads", "cv");

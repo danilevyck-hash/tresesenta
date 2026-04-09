@@ -4,7 +4,12 @@ import { getContent, saveContent } from "@/lib/content";
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { nombre, email, telefono, mensaje } = body;
+    const { nombre, email, telefono, mensaje, website } = body;
+
+    // Honeypot anti-bot
+    if (website) {
+      return NextResponse.json({ success: true });
+    }
 
     if (!nombre || !email || !mensaje) {
       return NextResponse.json({ error: "Campos requeridos" }, { status: 400 });
