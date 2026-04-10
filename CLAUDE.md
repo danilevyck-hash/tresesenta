@@ -47,3 +47,13 @@ Website de TRESESENTA, firma de administración e inspección de proyectos de co
 git remote add origin https://github.com/danilevyck-hash/tresesenta.git
 git push -u origin main
 ```
+
+
+## Regla de Calidad
+- Todo código debe funcionar a la primera. No pushear sin verificar el flujo completo end-to-end.
+- Verificar: datos fluyen escritura → DB → lectura → UI
+- Auth en serverless: usar tokens HMAC firmados, NO Maps en memoria
+- No hacer fire-and-forget (.then().catch()) para operaciones críticas — siempre await
+- useState en useEffect como dependencia puede causar re-renders destructivos — usar useRef para estado interno
+- Verificar compatibilidad de formatos antes de integrar (PNG/JPEG en jsPDF, DER/P1363 en WebAuthn)
+- Si no puedo probar en browser, simular el flujo con script
