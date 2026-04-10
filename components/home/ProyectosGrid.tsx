@@ -16,6 +16,7 @@ interface Proyecto {
   descripcion: string;
   servicios: string[];
   imagenes: string[];
+  nota?: string;
 }
 
 export default function ProyectosGrid({ proyectos }: { proyectos: Proyecto[] }) {

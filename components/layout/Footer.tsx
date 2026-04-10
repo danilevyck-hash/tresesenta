@@ -71,11 +71,11 @@ export default function Footer() {
               Contacto
             </h4>
             <div className="flex flex-col gap-3 text-white/40 font-montserrat text-sm">
-              <a href="tel:+5073960360" className="hover:text-white transition-colors">
-                +507 396-0360
+              <a href="tel:+50762272944" className="hover:text-white transition-colors">
+                +507 6227-2944
               </a>
-              <a href="mailto:info@tresesenta.com" className="hover:text-white transition-colors">
-                info@tresesenta.com
+              <a href="mailto:sd@tresesenta.com.pa" className="hover:text-white transition-colors">
+                sd@tresesenta.com.pa
               </a>
               <p>Ciudad de Panamá, Panamá</p>
             </div>

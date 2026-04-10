@@ -1,15 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { Briefcase, Search, ClipboardList, Shield, FileText, ShoppingCart } from "lucide-react";
+import { Briefcase, Search, ClipboardList, CheckSquare } from "lucide-react";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   briefcase: Briefcase,
   search: Search,
   clipboard: ClipboardList,
-  shield: Shield,
-  fileText: FileText,
-  shoppingCart: ShoppingCart,
+  checkSquare: CheckSquare,
 };
 
 const accentColors = [
@@ -17,8 +15,6 @@ const accentColors = [
   "bg-sand",
   "bg-teal-light",
   "bg-teal-dark",
-  "bg-sand",
-  "bg-teal-light",
 ];
 
 interface Servicio {
@@ -26,6 +22,7 @@ interface Servicio {
   nombre: string;
   descripcion: string;
   icono: string;
+  items?: string[];
 }
 
 export default function ServiciosSnippet({ servicios }: { servicios: Servicio[] }) {
@@ -44,8 +41,8 @@ export default function ServiciosSnippet({ servicios }: { servicios: Servicio[] 
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {servicios.slice(0, 6).map((s, i) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {servicios.slice(0, 4).map((s, i) => {
             const Icon = iconMap[s.icono] || Briefcase;
             return (
               <div

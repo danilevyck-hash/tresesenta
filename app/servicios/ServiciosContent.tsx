@@ -7,9 +7,7 @@ import {
   Briefcase,
   Search,
   ClipboardList,
-  Shield,
-  FileText,
-  ShoppingCart,
+  CheckSquare,
   ChevronDown,
 } from "lucide-react";
 
@@ -17,9 +15,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   briefcase: Briefcase,
   search: Search,
   clipboard: ClipboardList,
-  shield: Shield,
-  fileText: FileText,
-  shoppingCart: ShoppingCart,
+  checkSquare: CheckSquare,
 };
 
 interface Servicio {
@@ -27,6 +23,7 @@ interface Servicio {
   nombre: string;
   descripcion: string;
   icono: string;
+  items?: string[];
 }
 
 export default function ServiciosContent({ servicios }: { servicios: Servicio[] }) {
@@ -80,6 +77,9 @@ export default function ServiciosContent({ servicios }: { servicios: Servicio[] 
                     <h3 className="font-altivo text-xl text-brand-black group-hover:text-teal-dark transition-colors tracking-wide leading-tight">
                       {s.nombre}
                     </h3>
+                    <p className="font-montserrat text-sm text-gray-400 mt-1">
+                      {s.descripcion}
+                    </p>
                   </div>
                   <ChevronDown
                     className={`w-5 h-5 text-gray-400 transition-transform ${
@@ -92,7 +92,18 @@ export default function ServiciosContent({ servicios }: { servicios: Servicio[] 
                     isExpanded ? "max-h-96 pb-8" : "max-h-0"
                   }`}
                 >
-                  <p className="text-gray-600 leading-relaxed pl-16">{s.descripcion}</p>
+                  {s.items && s.items.length > 0 ? (
+                    <ul className="pl-16 space-y-2">
+                      {s.items.map((item, idx) => (
+                        <li key={idx} className="text-gray-600 leading-relaxed flex items-start gap-2">
+                          <span className="text-teal-dark mt-0.5">•</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-gray-600 leading-relaxed pl-16">{s.descripcion}</p>
+                  )}
                 </div>
               </div>
             );
@@ -117,7 +128,7 @@ export default function ServiciosContent({ servicios }: { servicios: Servicio[] 
               Cont&aacute;ctenos
             </a>
             <a
-              href="https://wa.me/5073960360"
+              href="https://wa.me/50762272944"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white font-montserrat font-semibold text-sm uppercase tracking-[0.15em] px-10 py-4 hover:bg-[#20bd5a] transition-colors"

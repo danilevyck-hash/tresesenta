@@ -102,8 +102,8 @@ export default function RootLayout({
               description:
                 "Firma panameña de administración e inspección de proyectos de construcción. Gerencia de proyectos, inspección técnica, preconstrucción y control de calidad.",
               url: "https://tresesenta.com",
-              telephone: "+507 396-0360",
-              email: "info@tresesenta.com",
+              telephone: "+507 6227-2944",
+              email: "sd@tresesenta.com.pa",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Ciudad de Panamá",

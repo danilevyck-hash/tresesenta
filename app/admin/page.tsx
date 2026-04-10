@@ -46,8 +46,8 @@ const TABS: { id: Tab; label: string; icon: React.ComponentType<{ className?: st
   { id: "aplicaciones", label: "Aplicaciones", icon: FileText },
 ];
 
-const ICONOS_SERVICIO = ["briefcase", "search", "clipboard", "shield", "fileText", "shoppingCart"];
-const CATEGORIAS_PROYECTO = ["Comercial", "Residencial", "Hotelería", "Institucional", "Megaproyecto"];
+const ICONOS_SERVICIO = ["briefcase", "search", "clipboard", "checkSquare"];
+const CATEGORIAS_PROYECTO = ["Comercial", "Residencial", "Deportivo", "Institucional"];
 
 function slugify(text: string) {
   return text

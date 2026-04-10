@@ -1,6 +1,6 @@
 "use client";
 
-const CATEGORIES = ["Todos", "Comercial", "Residencial", "Hotelería", "Institucional", "Megaproyecto"];
+const CATEGORIES = ["Todos", "Comercial", "Residencial", "Deportivo", "Institucional"];
 
 export default function ProjectFilter({
   active,

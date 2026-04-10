@@ -105,7 +105,7 @@ export default function NosotrosPage() {
             <div className="w-12 h-[2px] bg-sand mx-auto mt-6" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          <div className="max-w-2xl mx-auto">
             {content.equipo.map((member, i: number) => (
               <div
                 key={member.id}
@@ -121,10 +121,35 @@ export default function NosotrosPage() {
                     sizes="(max-width: 768px) 160px, 208px"
                   />
                 </div>
-                <h3 className="font-altivo text-lg text-brand-black tracking-wide">
+                <h3 className="font-altivo text-xl text-brand-black tracking-wide">
                   {member.nombre}
                 </h3>
-                <p className="font-montserrat text-sm text-gray-400 mt-1">{member.cargo}</p>
+                <p className="font-montserrat text-sm text-teal-dark font-semibold uppercase tracking-wider mt-1">
+                  {member.cargo}
+                </p>
+                {"bio" in member && (member as Record<string, string>).bio && (
+                  <p className="font-montserrat text-gray-500 text-sm leading-relaxed mt-4 max-w-lg mx-auto">
+                    {(member as Record<string, string>).bio}
+                  </p>
+                )}
+                <div className="flex items-center justify-center gap-4 mt-4">
+                  {"telefono" in member && (member as Record<string, string>).telefono && (
+                    <a
+                      href={`tel:+507${(member as Record<string, string>).telefono.replace(/-/g, "")}`}
+                      className="text-gray-400 hover:text-teal-dark transition-colors font-montserrat text-sm"
+                    >
+                      {(member as Record<string, string>).telefono}
+                    </a>
+                  )}
+                  {"email" in member && (member as Record<string, string>).email && (
+                    <a
+                      href={`mailto:${(member as Record<string, string>).email}`}
+                      className="text-gray-400 hover:text-teal-dark transition-colors font-montserrat text-sm"
+                    >
+                      {(member as Record<string, string>).email}
+                    </a>
+                  )}
+                </div>
                 {member.linkedin && (
                   <a
                     href={member.linkedin}

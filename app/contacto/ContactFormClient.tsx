@@ -73,8 +73,7 @@ export default function ContactFormClient() {
           <option value="">Seleccione un tipo</option>
           <option value="Residencial">Residencial</option>
           <option value="Comercial">Comercial</option>
-          <option value="Hotelería">Hotelería</option>
-          <option value="Industrial">Industrial</option>
+          <option value="Deportivo">Deportivo</option>
           <option value="Institucional">Institucional</option>
           <option value="Otro">Otro</option>
         </select>

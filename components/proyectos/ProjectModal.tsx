@@ -16,6 +16,7 @@ interface Proyecto {
   descripcion: string;
   servicios: string[];
   imagenes: string[];
+  nota?: string;
 }
 
 export default function ProjectModal({
@@ -127,6 +128,12 @@ export default function ProjectModal({
 
           <p className="text-gray-600 leading-relaxed mb-8">{proyecto.descripcion}</p>
 
+          {proyecto.nota && (
+            <p className="text-xs font-montserrat uppercase tracking-wider text-teal-dark bg-teal-dark/10 px-3 py-1.5 inline-block mb-6">
+              {proyecto.nota}
+            </p>
+          )}
+
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
             {[
               { label: "Ubicación", value: proyecto.ubicacion },
@@ -134,7 +141,7 @@ export default function ProjectModal({
               { label: "Promotor", value: proyecto.promotor },
               { label: "Inversión", value: proyecto.inversion },
               { label: "Área", value: proyecto.area },
-            ].map((item) => (
+            ].filter((item) => item.value).map((item) => (
               <div key={item.label}>
                 <div className="font-montserrat font-bold text-xs uppercase tracking-[0.15em] text-gray-400 mb-1">
                   {item.label}

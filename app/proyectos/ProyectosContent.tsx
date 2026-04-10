@@ -19,6 +19,7 @@ interface Proyecto {
   descripcion: string;
   servicios: string[];
   imagenes: string[];
+  nota?: string;
 }
 
 export default function ProyectosContent({ proyectos }: { proyectos: Proyecto[] }) {
@@ -95,7 +96,7 @@ export default function ProyectosContent({ proyectos }: { proyectos: Proyecto[] 
               Cont&aacute;ctenos
             </a>
             <a
-              href="https://wa.me/5073960360"
+              href="https://wa.me/50762272944"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white font-montserrat font-semibold text-sm uppercase tracking-[0.15em] px-10 py-4 hover:bg-[#20bd5a] transition-colors"

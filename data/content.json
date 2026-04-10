@@ -2,7 +2,7 @@
   "general": {
     "nombre": "TRESESENTA",
     "tagline": "Que su inversión en construcción llegue a tiempo, dentro de presupuesto, y con la calidad que espera.",
-    "quienesSomos": "Desde 2012, TRESESENTA representa los intereses del propietario en proyectos de construcción en Panamá. Nos aseguramos de que cada dólar invertido se refleje en la obra: revisamos presupuestos, supervisamos la ejecución en campo y controlamos cronogramas para que usted reciba exactamente lo que contrató, sin sorpresas.",
+    "quienesSomos": "En Tresesenta somos tu aliado estratégico en la gestión integral de proyectos de construcción, con una visión 360° que abarca desde la planificación hasta la entrega. Optimizamos tiempos, minimizamos riesgos, controlamos costos y garantizamos calidad. Brindamos asesoría independiente y soluciones personalizadas para maximizar el valor de cada proyecto, asegurando éxito y transparencia en cada etapa.",
     "mision": "Representar al propietario en cada decisión de obra, asegurando que cada dólar invertido se refleje en calidad, tiempo y resultado.",
     "vision": "Ser la firma líder en gestión de proyectos de construcción en la región, reconocida por nuestra integridad, eficiencia y resultados excepcionales.",
     "valores": [
@@ -13,8 +13,8 @@
       "Trabajo en equipo",
       "Responsabilidad social"
     ],
-    "telefono": "+507 396-0360",
-    "email": "info@tresesenta.com",
+    "telefono": "+507 6227-2944",
+    "email": "sd@tresesenta.com.pa",
     "direccion": "Ciudad de Panamá, Panamá",
     "redes": {
       "instagram": "https://instagram.com/tresesenta",
@@ -24,144 +24,279 @@
   },
   "servicios": [
     {
-      "id": "gerencia-proyectos",
-      "nombre": "Gerencia de Proyectos",
-      "descripcion": "Lideramos la planificación, coordinación y control integral de su proyecto desde la concepción hasta la entrega final. Nuestro equipo asegura que cada fase se ejecute dentro del alcance, presupuesto y cronograma establecidos.",
-      "icono": "briefcase"
-    },
-    {
-      "id": "inspeccion-tecnica",
-      "nombre": "Inspección Técnica",
-      "descripcion": "Realizamos supervisión continua en obra para verificar el cumplimiento de planos, especificaciones técnicas y normativas vigentes. Cada detalle es evaluado para garantizar la calidad constructiva.",
-      "icono": "search"
-    },
-    {
       "id": "preconstruccion",
       "nombre": "Preconstrucción",
-      "descripcion": "Analizamos la viabilidad técnica y financiera del proyecto antes de iniciar la construcción. Incluye revisión de presupuestos, cronogramas preliminares y evaluación de riesgos.",
-      "icono": "clipboard"
+      "descripcion": "Optimización de costos sin comprometer la calidad.",
+      "icono": "clipboard",
+      "items": [
+        "Revisión de planos",
+        "Take off de cantidades",
+        "Presupuestos",
+        "Licitaciones",
+        "Gestión de compras especiales",
+        "Value engineering"
+      ]
     },
     {
-      "id": "control-calidad",
-      "nombre": "Control de Calidad",
-      "descripcion": "Implementamos sistemas rigurosos de aseguramiento de calidad en cada etapa del proyecto, desde la recepción de materiales hasta las pruebas finales de funcionamiento.",
-      "icono": "shield"
+      "id": "inspeccion",
+      "nombre": "Inspección",
+      "descripcion": "Control de la obra para reducir errores y sobrecostos.",
+      "icono": "search",
+      "items": [
+        "Supervisión en todas las etapas",
+        "Acompañamiento en el desarrollo de la obra",
+        "Garantizar el cumplimiento de planos, normas y estándares de calidad"
+      ]
     },
     {
-      "id": "administracion-contratos",
-      "nombre": "Administración de Contratos",
-      "descripcion": "Gestionamos todos los aspectos contractuales del proyecto: licitaciones, órdenes de cambio, reclamos, pagos y cierre de contratos, protegiendo los intereses del propietario.",
-      "icono": "fileText"
+      "id": "administracion",
+      "nombre": "Administración",
+      "descripcion": "Gestión de tiempos, costos y flujo de caja durante la ejecución.",
+      "icono": "briefcase",
+      "items": [
+        "Coordinación de contratistas",
+        "Manejo de cronograma",
+        "Control de presupuesto",
+        "Revisión de órdenes de cambio",
+        "Cierre administrativo y financiero"
+      ]
     },
     {
-      "id": "gestion-compras",
-      "nombre": "Gestión de Compras",
-      "descripcion": "Optimizamos el proceso de adquisición de materiales y equipos, negociando con proveedores para obtener las mejores condiciones de precio, calidad y tiempo de entrega.",
-      "icono": "shoppingCart"
+      "id": "punch-list",
+      "nombre": "Punch List",
+      "descripcion": "Levantamiento de pendientes para asegurar una entrega de calidad.",
+      "icono": "checkSquare",
+      "items": [
+        "Inspección final",
+        "Punch list",
+        "Cierre de detalles pendientes",
+        "Gestión de manuales y garantías"
+      ]
     }
   ],
   "proyectos": [
     {
-      "id": "torre-oceania",
-      "nombre": "Torre Oceanía",
+      "id": "shake-shack",
+      "nombre": "Restaurante Shake Shack",
       "categoria": "Comercial",
-      "ubicacion": "Punta Pacífica, Ciudad de Panamá",
-      "periodo": "2021 - 2023",
-      "promotor": "Grupo Inversiones del Pacífico",
-      "inversion": "$45,000,000",
-      "area": "32,000 m²",
-      "descripcion": "Edificio de oficinas clase A de 25 pisos con certificación LEED Gold. El proyecto incluyó la coordinación de más de 15 subcontratistas y la implementación de tecnología BIM para el control de interferencias.",
-      "servicios": ["Gerencia de Proyectos", "Inspección Técnica", "Control de Calidad"],
+      "ubicacion": "Panamá",
+      "periodo": "Feb 2025",
+      "promotor": "",
+      "inversion": "",
+      "area": "",
+      "descripcion": "Administración del proceso de diseño y licitación formal para la construcción de cuatro ubicaciones en paralelo.",
+      "servicios": ["Preconstrucción", "Administración"],
       "imagenes": [
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
-        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800",
-        "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800"
+        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800"
       ],
-      "logoCliente": ""
+      "logoCliente": "",
+      "nota": ""
     },
     {
-      "id": "residencial-vista-mar",
-      "nombre": "Residencial Vista Mar",
-      "categoria": "Residencial",
-      "ubicacion": "Costa del Este, Ciudad de Panamá",
-      "periodo": "2022 - 2024",
-      "promotor": "Desarrollos Costa Verde S.A.",
-      "inversion": "$28,000,000",
-      "area": "18,500 m²",
-      "descripcion": "Complejo residencial de lujo de 120 unidades distribuidas en 3 torres de 15 pisos cada una. Amenidades incluyen piscina infinity, gimnasio y áreas sociales con vista al mar.",
-      "servicios": ["Gerencia de Proyectos", "Preconstrucción", "Administración de Contratos"],
+      "id": "capital-grille",
+      "nombre": "Restaurante Capital Grille",
+      "categoria": "Comercial",
+      "ubicacion": "Panamá",
+      "periodo": "Sep 2025 - Presente",
+      "promotor": "",
+      "inversion": "$1,228,447",
+      "area": "643 m²",
+      "descripcion": "Dirección del project management para restaurante de alta gama, coordinación entre múltiples especialidades y proveedores.",
+      "servicios": ["Administración", "Inspección"],
       "imagenes": [
-        "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800",
-        "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800",
+        "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800"
+      ],
+      "logoCliente": "",
+      "nota": ""
+    },
+    {
+      "id": "ph-miramar",
+      "nombre": "Remodelación Áreas Sociales PH Miramar",
+      "categoria": "Residencial",
+      "ubicacion": "Panamá",
+      "periodo": "Ene 2026 - Presente",
+      "promotor": "",
+      "inversion": "$1,762,169",
+      "area": "2,904 m²",
+      "descripcion": "Gestión y supervisión integral incluyendo inspección de obra y coordinación entre disciplinas.",
+      "servicios": ["Administración", "Inspección"],
+      "imagenes": [
+        "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800"
+      ],
+      "logoCliente": "",
+      "nota": ""
+    },
+    {
+      "id": "ph-cala",
+      "nombre": "PH Cala",
+      "categoria": "Residencial",
+      "ubicacion": "Ocean Reef, Panamá",
+      "periodo": "Oct 2024 - Presente",
+      "promotor": "",
+      "inversion": "$12,992,000",
+      "area": "6,229 m²",
+      "descripcion": "Edificio residencial de 6 niveles en Ocean Reef.",
+      "servicios": ["Administración", "Inspección"],
+      "imagenes": [
+        "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800"
+      ],
+      "logoCliente": "",
+      "nota": "Experiencia durante Proyectos Mar Azul"
+    },
+    {
+      "id": "mananitas-country-club",
+      "nombre": "Complejo Mañanitas Country Club",
+      "categoria": "Deportivo",
+      "ubicacion": "Las Mañanitas, Panamá",
+      "periodo": "Jul 2024 - Feb 2025",
+      "promotor": "",
+      "inversion": "$1,645,609",
+      "area": "5 He",
+      "descripcion": "Complejo deportivo comunitario.",
+      "servicios": ["Administración", "Inspección"],
+      "imagenes": [
+        "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800"
+      ],
+      "logoCliente": "",
+      "nota": "Experiencia durante Proyectos Mar Azul"
+    },
+    {
+      "id": "bioma",
+      "nombre": "Bioma",
+      "categoria": "Residencial",
+      "ubicacion": "Panamá",
+      "periodo": "Ene 2024 - Abr 2025",
+      "promotor": "",
+      "inversion": "$4,997,678",
+      "area": "118,553 m²",
+      "descripcion": "Sótano de 5 niveles.",
+      "servicios": ["Administración", "Inspección"],
+      "imagenes": [
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800"
+      ],
+      "logoCliente": "",
+      "nota": "Experiencia durante Proyectos Mar Azul"
+    },
+    {
+      "id": "superintendencia-bancos",
+      "nombre": "Oficinas Superintendencia de Bancos de Panamá",
+      "categoria": "Institucional",
+      "ubicacion": "Panamá",
+      "periodo": "Mar 2024 - Abr 2025",
+      "promotor": "",
+      "inversion": "$6,027,371",
+      "area": "5,613 m²",
+      "descripcion": "Contrato diseño-construcción regulatorio.",
+      "servicios": ["Administración", "Inspección"],
+      "imagenes": [
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800"
+      ],
+      "logoCliente": "",
+      "nota": "Experiencia durante Proyectos Mar Azul"
+    },
+    {
+      "id": "family-office-vicsons",
+      "nombre": "Family Office Vicsons",
+      "categoria": "Comercial",
+      "ubicacion": "Panamá",
+      "periodo": "Mar 2023 - Dic 2024",
+      "promotor": "",
+      "inversion": "$2,245,000",
+      "area": "982 m²",
+      "descripcion": "Diseño detallado, más de 50 proveedores.",
+      "servicios": ["Administración", "Inspección", "Preconstrucción"],
+      "imagenes": [
+        "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800"
+      ],
+      "logoCliente": "",
+      "nota": "Experiencia durante Proyectos Mar Azul"
+    },
+    {
+      "id": "cos-sport-plaza",
+      "nombre": "COS Sport Plaza",
+      "categoria": "Deportivo",
+      "ubicacion": "Panamá",
+      "periodo": "Dic 2022 - Abr 2024",
+      "promotor": "",
+      "inversion": "$11,924,000",
+      "area": "35,259 m²",
+      "descripcion": "Proyecto por fases.",
+      "servicios": ["Administración", "Inspección"],
+      "imagenes": [
+        "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800"
+      ],
+      "logoCliente": "",
+      "nota": "Experiencia durante Proyectos Mar Azul"
+    },
+    {
+      "id": "onu-panama",
+      "nombre": "Oficina Programa de las Naciones Unidas",
+      "categoria": "Institucional",
+      "ubicacion": "Panamá",
+      "periodo": "Ago 2022 - Nov 2023",
+      "promotor": "",
+      "inversion": "$2,735,000",
+      "area": "2,200 m²",
+      "descripcion": "Gestión integral.",
+      "servicios": ["Administración", "Inspección"],
+      "imagenes": [
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800"
+      ],
+      "logoCliente": "",
+      "nota": "Experiencia durante Proyectos Mar Azul"
+    },
+    {
+      "id": "cable-wireless-arraijan",
+      "nombre": "Cable & Wireless Arraiján",
+      "categoria": "Comercial",
+      "ubicacion": "Arraiján, Panamá",
+      "periodo": "Jun 2022 - Nov 2022",
+      "promotor": "",
+      "inversion": "$1,044,000",
+      "area": "1,353 m²",
+      "descripcion": "Licitación diseño y construcción.",
+      "servicios": ["Preconstrucción", "Administración"],
+      "imagenes": [
         "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800"
       ],
-      "logoCliente": ""
+      "logoCliente": "",
+      "nota": "Experiencia durante Proyectos Mar Azul"
     },
     {
-      "id": "hotel-pacifico",
-      "nombre": "Hotel Pacífico Resort & Spa",
-      "categoria": "Hotelería",
-      "ubicacion": "Playa Blanca, Coclé",
-      "periodo": "2020 - 2023",
-      "promotor": "Cadena Hoteles Premium",
-      "inversion": "$62,000,000",
-      "area": "45,000 m²",
-      "descripcion": "Resort de 5 estrellas con 200 habitaciones, centro de convenciones, spa de clase mundial y 3 restaurantes. Construcción desafiante en zona costera con protocolos especiales contra la salinidad.",
-      "servicios": ["Gerencia de Proyectos", "Inspección Técnica", "Control de Calidad", "Gestión de Compras"],
+      "id": "cable-wireless-transistmica",
+      "nombre": "Cable & Wireless Transístmica",
+      "categoria": "Comercial",
+      "ubicacion": "Transístmica, Panamá",
+      "periodo": "Jun 2022 - Dic 2022",
+      "promotor": "",
+      "inversion": "$1,235,000",
+      "area": "1,254 m²",
+      "descripcion": "Gestión diseño por promotor.",
+      "servicios": ["Preconstrucción", "Administración"],
       "imagenes": [
-        "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?w=800",
-        "https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?w=800",
-        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800"
+        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800"
       ],
-      "logoCliente": ""
-    },
-    {
-      "id": "centro-logistico-americas",
-      "nombre": "Centro Logístico Las Américas",
-      "categoria": "Megaproyecto",
-      "ubicacion": "Howard, Panamá Oeste",
-      "periodo": "2019 - 2024",
-      "promotor": "Consorcio Logístico Internacional",
-      "inversion": "$120,000,000",
-      "area": "85,000 m²",
-      "descripcion": "Megaproyecto logístico que incluye 6 naves industriales, centro de distribución automatizado, edificio administrativo y vías de acceso. El proyecto más grande gestionado por la firma.",
-      "servicios": ["Gerencia de Proyectos", "Inspección Técnica", "Preconstrucción", "Administración de Contratos", "Control de Calidad", "Gestión de Compras"],
-      "imagenes": [
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800",
-        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800",
-        "https://images.unsplash.com/photo-1587582423116-ec07293f0395?w=800"
-      ],
-      "logoCliente": ""
+      "logoCliente": "",
+      "nota": "Experiencia durante Proyectos Mar Azul"
     }
   ],
   "equipo": [
     {
-      "id": "carlos-mendez",
-      "nombre": "Carlos Méndez",
-      "cargo": "Director General",
+      "id": "santiago-diaz",
+      "nombre": "Santiago Díaz",
+      "cargo": "Gerente General / Fundador",
+      "bio": "Ingeniero civil graduado de Columbia University en Nueva York, con enfoque en administración de construcción. Experiencia en Turner & Townsend NYC en gestión de proyectos hoteleros. Ex Gerente de Proyectos en Proyectos Mar Azul. Ha gestionado más de 106,000 m² de construcción y $47 millones de dólares en inversión.",
+      "telefono": "6227-2944",
+      "email": "sd@tresesenta.com.pa",
       "foto": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
-      "linkedin": ""
-    },
-    {
-      "id": "maria-rodriguez",
-      "nombre": "María Rodríguez",
-      "cargo": "Directora de Operaciones",
-      "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400",
-      "linkedin": ""
-    },
-    {
-      "id": "alejandro-torres",
-      "nombre": "Alejandro Torres",
-      "cargo": "Gerente de Inspección",
-      "foto": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400",
       "linkedin": ""
     }
   ],
   "metricas": [
-    { "valor": "+50", "label": "Proyectos Completados" },
-    { "valor": "$500M+", "label": "En Inversión Gestionada" },
-    { "valor": "+200K", "label": "Metros Cuadrados" },
-    { "valor": "12", "label": "Años de Experiencia" }
+    { "valor": "$47M+", "label": "Inversión Gestionada" },
+    { "valor": "106,000+", "label": "Metros Cuadrados" },
+    { "valor": "12+", "label": "Proyectos" },
+    { "valor": "360°", "label": "Visión Integral" }
   ],
   "carrera": [
     {

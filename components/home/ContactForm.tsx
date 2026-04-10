@@ -101,8 +101,7 @@ export default function ContactForm() {
               <option value="" className="bg-brand-black">Seleccione un tipo</option>
               <option value="Residencial" className="bg-brand-black">Residencial</option>
               <option value="Comercial" className="bg-brand-black">Comercial</option>
-              <option value="Hotelería" className="bg-brand-black">Hotelería</option>
-              <option value="Industrial" className="bg-brand-black">Industrial</option>
+              <option value="Deportivo" className="bg-brand-black">Deportivo</option>
               <option value="Institucional" className="bg-brand-black">Institucional</option>
               <option value="Otro" className="bg-brand-black">Otro</option>
             </select>
