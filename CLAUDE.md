@@ -42,6 +42,29 @@ Website de TRESESENTA, firma de administración e inspección de proyectos de co
 - POST /api/contact — formulario de contacto (guarda en content.json)
 - POST /api/apply — formulario de carrera con upload de CV
 
+## Changes — April 2026 Session
+
+### Real Content
+- Founder bio, 4 services, 12 real projects, real metrics populated from company PDF
+- Placeholder LinkedIn URLs cleared
+
+### Competitive Analysis & SEO
+- WhatsApp floating button added
+- H1 SEO on all pages
+- CTAs on all pages
+- "Por que Tresesenta" section added
+- Schema JSON-LD on all pages
+- `/contacto` page added
+- Improved copies throughout
+- Project type field added to project data
+- Carrera link moved to footer (less prominent)
+- Animated counter for metrics
+
+### Reliability & Security
+- Custom error pages (404, 500)
+- Honeypot anti-bot on forms
+- PDF-only CV upload restriction on career form
+
 ## Deploy
 ```bash
 git remote add origin https://github.com/danilevyck-hash/tresesenta.git
